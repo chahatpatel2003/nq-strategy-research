@@ -1,0 +1,13 @@
+{
+  "kind": "tree",
+  "depth": 3,
+  "n_leaves": 7,
+  "importances": {
+    "atr1m": 0.396629207276822,
+    "dist_pdh_norm": 0.26961652630093363,
+    "secs_since_low_300": 0.1216377882252726,
+    "secs_since_high_300": 0.1156225134571363,
+    "dist_open_norm": 0.09649396473983557
+  },
+  "rules": "|--- dist_pdh_norm <= 0.769\n|   |--- atr1m <= -0.777\n|   |   |--- dist_open_norm <= 0.813\n|   |   |   |--- class: 0\n|   |   |--- dist_open_norm >  0.813\n|   |   |   |--- class: 0\n|   |--- atr1m >  -0.777\n|   |   |--- secs_since_low_300 <= -0.753\n|   |   |   |--- class: 1\n|   |   |--- secs_since_low_300 >  -0.753\n|   |   |   |--- class: 0\n|--- dist_pdh_norm >  0.769\n|   |--- atr1m <= -0.177\n|   |   |--- secs_since_high_300 <= 0.616\n|   |   |   |--- class: 0\n|   |   |--- secs_since_high_300 >  0.616\n|   |   |   |--- class: 1\n|   |--- atr1m >  -0.177\n|   |   |--- class: 1\n"
+}

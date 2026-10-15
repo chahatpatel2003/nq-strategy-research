@@ -1,0 +1,12 @@
+{
+  "note": "DIAGNOSTIC ONLY. The frozen baseline is theta = 0.50 x VU and is not changed by anything here. All grid points are reported.",
+  "sample_days": 254,
+  "stride": 3,
+  "population_days": 762,
+  "grid": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ]
+}

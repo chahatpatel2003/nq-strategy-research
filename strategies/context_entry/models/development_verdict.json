@@ -1,0 +1,130 @@
+{
+  "context_positive": true,
+  "context_beats_noncontext": false,
+  "context_pooled": {
+    "n_trades": 4484,
+    "win_rate": 0.5510704727921498,
+    "expectancy_R": 0.07114521458752307,
+    "profit_factor_R": 1.1940075446669665
+  },
+  "noncontext_pooled": {
+    "n_trades": 4660,
+    "win_rate": 0.5111587982832618,
+    "expectancy_R": -0.004017123622035303
+  },
+  "context_vs_noncontext": {
+    "stat": "expectancy_R",
+    "n_a": 4484,
+    "n_b": 4660,
+    "n_days": 334,
+    "mean_a": 0.07114521458752307,
+    "mean_b": -0.004017123622035303,
+    "diff": 0.07516233820955837,
+    "ci95_lo": -0.023444359615731044,
+    "ci95_hi": 0.17209383908201387,
+    "p_diff_le_0": 0.0672,
+    "n_boot": 10000
+  },
+  "context_vs_noncontext_wr": {
+    "stat": "win_rate",
+    "n_a": 4484,
+    "n_b": 4660,
+    "n_days": 334,
+    "mean_a": 0.5510704727921498,
+    "mean_b": 0.5111587982832618,
+    "diff": 0.039911674508887995,
+    "ci95_lo": -0.013679123447064383,
+    "ci95_hi": 0.0924854190974422,
+    "p_diff_le_0": 0.074,
+    "n_boot": 10000
+  },
+  "gates": {
+    "E1": {
+      "G1": true,
+      "G2_periods": false,
+      "G2_combined": true,
+      "G3": false,
+      "G4": false,
+      "eligible": false,
+      "n": 369,
+      "periods_positive": 3,
+      "net_ER": 0.026982703687752775,
+      "pf_r": 1.067065286215238,
+      "adv_lo": -0.10635276153849076,
+      "median_advantage": -0.06274840172243461
+    },
+    "E2": {
+      "G1": true,
+      "G2_periods": false,
+      "G2_combined": true,
+      "G3": false,
+      "G4": false,
+      "eligible": false,
+      "n": 328,
+      "periods_positive": 2,
+      "net_ER": 0.004262240569724752,
+      "pf_r": 1.0102887342383717,
+      "adv_lo": -0.13496707514232642,
+      "median_advantage": -0.0740947205778164
+    },
+    "E3": {
+      "G1": true,
+      "G2_periods": false,
+      "G2_combined": true,
+      "G3": true,
+      "G4": false,
+      "eligible": false,
+      "n": 323,
+      "periods_positive": 3,
+      "net_ER": 0.06414916641222017,
+      "pf_r": 1.16098295592375,
+      "adv_lo": -0.08456353424177952,
+      "median_advantage": -0.009645473855285662
+    },
+    "E4": {
+      "G1": false,
+      "G2_periods": false,
+      "G2_combined": false,
+      "G3": false,
+      "G4": false,
+      "eligible": false,
+      "n": 227,
+      "periods_positive": 2,
+      "net_ER": -0.01971348936367482,
+      "pf_r": 0.956874806355371,
+      "adv_lo": -0.1959563265812865,
+      "median_advantage": -0.10428108156654922
+    },
+    "E5": {
+      "G1": true,
+      "G2_periods": false,
+      "G2_combined": true,
+      "G3": true,
+      "G4": false,
+      "eligible": false,
+      "n": 321,
+      "periods_positive": 3,
+      "net_ER": 0.046400020772617526,
+      "pf_r": 1.1148149877203937,
+      "adv_lo": -0.10024295599697707,
+      "median_advantage": -0.002881199465130657
+    },
+    "E6": {
+      "G1": false,
+      "G2_periods": false,
+      "G2_combined": false,
+      "G3": false,
+      "G4": false,
+      "eligible": false,
+      "n": 221,
+      "periods_positive": 1,
+      "net_ER": -0.021939426838072217,
+      "pf_r": 0.9520064760688508,
+      "adv_lo": -0.19817736073554645,
+      "median_advantage": -0.10764812526489882
+    }
+  },
+  "eligible": [],
+  "total_configurations_evaluated": 6,
+  "decision": "PHASE 6 FAILS BEFORE VALIDATION - no entry mechanic passed the preregistered development gates; 2026-Q1 stays sealed."
+}

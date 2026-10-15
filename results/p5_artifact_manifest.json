@@ -1,0 +1,19 @@
+{
+  "phase": 5,
+  "note": "Phase 5 was never frozen (candidate rejected at Gate F); this pins the artifacts Phase 6 reuses read-only.",
+  "combined_sha256": "d0783a6638d88aecd4d8225915ea94d27b00a576f1d36e33ac5e3beafb73d877",
+  "recorded_utc": "2026-08-20T22:19:11.990914+00:00",
+  "files": {
+    "src/nqr/p5/holdout5.py": "9136512cd4a65817c75af1af09da120406d0abd9484549fbff87f49ee763dc5b",
+    "src/nqr/p5/labels5.py": "b824f7a0c187fadb0bd69f1bf78b1396b5988dba298a6612c4ce7659d10b6210",
+    "src/nqr/p5/dataset5.py": "5b7bd47606986d22112ceae66f33aea1617fe2baa36315570fdb2de3677ec9fd",
+    "src/nqr/p5/model5.py": "6d82e11d5d4f3e15ab231cf5937d1bdcda715e44adf365431a1b2a99c03a65e8",
+    "src/nqr/p5/backtest5.py": "ba74c830bbf5f69f7357789d6bb7c1c0834bf82895c876918ee4bf7b0743b3cc",
+    "strategies/larger_r/PHASE5_SPEC.md": "309511b8587a5eca5d1333ca12db4be2f54c5017297bcb3a88b89ba1f6ea4568",
+    "strategies/larger_r/PHASE5_SEARCH_BUDGET.md": "571d104709b0de5524ed6e5df95fbb07d5f1b630f3b4840c87e2a438a925ba3f",
+    "strategies/larger_r/PHASE5_FEATURE_REGISTRY.md": "b5053b77bebb38b759d072db7c7ac60f7ebe050213502a16284eec45596aaa26",
+    "strategies/larger_r/PHASE5_VERDICT.md": "af2e0fb7341b97028635a55b4e3d5b5f28a0f94429188d023311c7427ff7216a",
+    "strategies/larger_r/models/production_model.pkl": "be5d5e8a4a5c8ad35fad61a713a09318696ad98437e157d22ed5400d627aec4f",
+    "strategies/larger_r/models/development_meta.json": "bb17b8c0211a9a9f87c2501e69b44a94dbf3be3fca11e714e24799ca129f0fb2"
+  }
+}

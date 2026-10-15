@@ -1,0 +1,275 @@
+{
+  "time_within_context": [
+    {
+      "bin": "0-5 min",
+      "n_trades": 1278,
+      "win_rate": 0.5602503912363067,
+      "gross_ER": 0.10503894001518413,
+      "expectancy_R": 0.07700105289767803,
+      "profit_factor_R": 1.2167076521800004,
+      "avg_MAE_points": 27.648082942097027
+    },
+    {
+      "bin": "5-10",
+      "n_trades": 1025,
+      "win_rate": 0.5521951219512196,
+      "gross_ER": 0.09968344714103718,
+      "expectancy_R": 0.07009128125750531,
+      "profit_factor_R": 1.1915344041140958,
+      "avg_MAE_points": 27.31731707317073
+    },
+    {
+      "bin": "10-15",
+      "n_trades": 767,
+      "win_rate": 0.5567144719687093,
+      "gross_ER": 0.10160173302549762,
+      "expectancy_R": 0.071616142378741,
+      "profit_factor_R": 1.1952250736683476,
+      "avg_MAE_points": 27.384941329856584
+    },
+    {
+      "bin": "15-20",
+      "n_trades": 596,
+      "win_rate": 0.540268456375839,
+      "gross_ER": 0.09246692560063124,
+      "expectancy_R": 0.06365806842407452,
+      "profit_factor_R": 1.1733750386346564,
+      "avg_MAE_points": 27.99790268456376
+    },
+    {
+      "bin": "20+",
+      "n_trades": 818,
+      "win_rate": 0.5378973105134475,
+      "gross_ER": 0.0990836575074325,
+      "expectancy_R": 0.06833061532155894,
+      "profit_factor_R": 1.1774715453966764,
+      "avg_MAE_points": 25.71088019559902
+    }
+  ],
+  "bucket_direction": [
+    {
+      "bucket": "09:30-10:00",
+      "side": "LONG",
+      "n_trades": 54,
+      "win_rate": 0.6481481481481481,
+      "gross_ER": 0.2830248931965982,
+      "expectancy_R": 0.25257320311590087,
+      "profit_factor_R": 1.8114361494284548
+    },
+    {
+      "bucket": "09:30-10:00",
+      "side": "SHORT",
+      "n_trades": 898,
+      "win_rate": 0.5367483296213809,
+      "gross_ER": 0.07711817915351082,
+      "expectancy_R": 0.03477637599227505,
+      "profit_factor_R": 1.0731357105992068
+    },
+    {
+      "bucket": "10:00-10:30",
+      "side": "LONG",
+      "n_trades": 97,
+      "win_rate": 0.6185567010309279,
+      "gross_ER": 0.035788973536922966,
+      "expectancy_R": 0.01794788507286765,
+      "profit_factor_R": 1.06488782173636
+    },
+    {
+      "bucket": "10:00-10:30",
+      "side": "SHORT",
+      "n_trades": 306,
+      "win_rate": 0.6339869281045751,
+      "gross_ER": 0.19829641007264964,
+      "expectancy_R": 0.17229458807700618,
+      "profit_factor_R": 1.5718310556436217
+    },
+    {
+      "bucket": "10:30-11:00",
+      "side": "LONG",
+      "n_trades": 449,
+      "win_rate": 0.5545657015590201,
+      "gross_ER": 0.1415132206844334,
+      "expectancy_R": 0.11481219520936718,
+      "profit_factor_R": 1.4048495614448657
+    },
+    {
+      "bucket": "10:30-11:00",
+      "side": "SHORT",
+      "n_trades": 596,
+      "win_rate": 0.5805369127516778,
+      "gross_ER": 0.12201837480870517,
+      "expectancy_R": 0.09677094029404033,
+      "profit_factor_R": 1.2693893175811934
+    },
+    {
+      "bucket": "11:00-11:30",
+      "side": "LONG",
+      "n_trades": 549,
+      "win_rate": 0.6411657559198543,
+      "gross_ER": 0.28605341145930185,
+      "expectancy_R": 0.25542987998294464,
+      "profit_factor_R": 2.115290941979367
+    },
+    {
+      "bucket": "11:00-11:30",
+      "side": "SHORT",
+      "n_trades": 1535,
+      "win_rate": 0.4905537459283388,
+      "gross_ER": 0.0055460169357291695,
+      "expectancy_R": -0.01939625106018945,
+      "profit_factor_R": 0.9515360910536794
+    }
+  ],
+  "entry_quality": [
+    {
+      "method": "E1",
+      "n": 369,
+      "fill_rate": 0.7350597609561753,
+      "median_wait_min": 5.004755783333334,
+      "mean_improve_R": 0.03723752470228667,
+      "mean_pre_mae_R": 0.49014384133825245,
+      "mean_pre_mfe_R": 0.44284671633560146,
+      "median_remaining_min": 20.994299966666667,
+      "avg_MFE_points": 29.008130081300813,
+      "avg_MAE_points": 27.937669376693766,
+      "win_rate": 0.5149051490514905,
+      "expectancy_R": 0.026982703687752775
+    },
+    {
+      "method": "E2",
+      "n": 328,
+      "fill_rate": 0.6533864541832669,
+      "median_wait_min": 10.004939225,
+      "mean_improve_R": 0.07330687075663919,
+      "mean_pre_mae_R": 0.6965185644451157,
+      "mean_pre_mfe_R": 0.6277665294178311,
+      "median_remaining_min": 17.9955722,
+      "avg_MFE_points": 28.024390243902438,
+      "avg_MAE_points": 27.87576219512195,
+      "win_rate": 0.5091463414634146,
+      "expectancy_R": 0.004262240569724752
+    },
+    {
+      "method": "E3",
+      "n": 323,
+      "fill_rate": 0.6434262948207171,
+      "median_wait_min": 1.557275,
+      "mean_improve_R": 0.25729739570195664,
+      "mean_pre_mae_R": 0.2785580124845026,
+      "mean_pre_mfe_R": 0.278948273236633,
+      "median_remaining_min": 21.2485922,
+      "avg_MFE_points": 29.0859133126935,
+      "avg_MAE_points": 26.42105263157895,
+      "win_rate": 0.5386996904024768,
+      "expectancy_R": 0.06414916641222017
+    },
+    {
+      "method": "E4",
+      "n": 227,
+      "fill_rate": 0.45219123505976094,
+      "median_wait_min": 4.431956633333333,
+      "mean_improve_R": 0.5035677645553011,
+      "mean_pre_mae_R": 0.5296134018556132,
+      "mean_pre_mfe_R": 0.3820987280830481,
+      "median_remaining_min": 20.92594875,
+      "avg_MFE_points": 26.38215859030837,
+      "avg_MAE_points": 26.659691629955947,
+      "win_rate": 0.4889867841409692,
+      "expectancy_R": -0.01971348936367482
+    },
+    {
+      "method": "E5",
+      "n": 321,
+      "fill_rate": 0.6394422310756972,
+      "median_wait_min": 2.1172355,
+      "mean_improve_R": 0.25422432592547517,
+      "mean_pre_mae_R": 0.38372793685771395,
+      "mean_pre_mfe_R": 0.2775420164777918,
+      "median_remaining_min": 20.993452133333335,
+      "avg_MFE_points": 28.654984423676012,
+      "avg_MAE_points": 26.639408099688474,
+      "win_rate": 0.5358255451713395,
+      "expectancy_R": 0.046400020772617526
+    },
+    {
+      "method": "E6",
+      "n": 221,
+      "fill_rate": 0.4402390438247012,
+      "median_wait_min": 4.585624283333333,
+      "mean_improve_R": 0.5084400126174006,
+      "mean_pre_mae_R": 0.6345896079560497,
+      "mean_pre_mfe_R": 0.38443559317404435,
+      "median_remaining_min": 21.06394153333333,
+      "avg_MFE_points": 26.320135746606336,
+      "avg_MAE_points": 26.81108597285068,
+      "win_rate": 0.48868778280542985,
+      "expectancy_R": -0.021939426838072217
+    },
+    {
+      "method": "CONTROL_IMMEDIATE",
+      "n": 409,
+      "fill_rate": 0.8147410358565738,
+      "median_wait_min": 0.00469405,
+      "mean_improve_R": 0.0,
+      "mean_pre_mae_R": 0.0,
+      "mean_pre_mfe_R": 0.0,
+      "median_remaining_min": 21.995308183333336,
+      "avg_MFE_points": 29.420537897310513,
+      "avg_MAE_points": 27.75916870415648,
+      "win_rate": 0.5550122249388753,
+      "expectancy_R": 0.0679703057639926
+    }
+  ],
+  "adverse_selection": [
+    {
+      "method": "E1",
+      "improve_R": 0.03723752470228667,
+      "pre_mae_R": 0.49014384133825245,
+      "net": -0.4529063166359658,
+      "n": 369,
+      "fill_rate": 0.7350597609561753
+    },
+    {
+      "method": "E2",
+      "improve_R": 0.07330687075663919,
+      "pre_mae_R": 0.6965185644451157,
+      "net": -0.6232116936884765,
+      "n": 328,
+      "fill_rate": 0.6533864541832669
+    },
+    {
+      "method": "E3",
+      "improve_R": 0.25729739570195664,
+      "pre_mae_R": 0.2785580124845026,
+      "net": -0.021260616782545982,
+      "n": 323,
+      "fill_rate": 0.6434262948207171
+    },
+    {
+      "method": "E4",
+      "improve_R": 0.5035677645553011,
+      "pre_mae_R": 0.5296134018556132,
+      "net": -0.026045637300312174,
+      "n": 227,
+      "fill_rate": 0.45219123505976094
+    },
+    {
+      "method": "E5",
+      "improve_R": 0.25422432592547517,
+      "pre_mae_R": 0.38372793685771395,
+      "net": -0.12950361093223878,
+      "n": 321,
+      "fill_rate": 0.6394422310756972
+    },
+    {
+      "method": "E6",
+      "improve_R": 0.5084400126174006,
+      "pre_mae_R": 0.6345896079560497,
+      "net": -0.1261495953386491,
+      "n": 221,
+      "fill_rate": 0.4402390438247012
+    }
+  ],
+  "n_contexts": 502,
+  "note": "DIAGNOSTIC ONLY - POST-HOC - REQUIRES NEW UNTOUCHED DATA"
+}

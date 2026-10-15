@@ -1,0 +1,61 @@
+{
+  "split": "train2021",
+  "start": "2021-01-01",
+  "end": "2021-12-31",
+  "role": "DEVELOPMENT (context model in-sample)",
+  "context_model": "r4p0:A_logit:top2",
+  "tau": 0.1799381018935508,
+  "r_tag": "r4p0",
+  "seed": 20260821,
+  "n_days": 254,
+  "n_contexts": 121,
+  "n_rows": 30480,
+  "runtime_s": 1.8,
+  "books": {
+    "E1": {
+      "rows": 121,
+      "accepted": 91,
+      "fill_rate": 0.7520661157024794
+    },
+    "E2": {
+      "rows": 121,
+      "accepted": 82,
+      "fill_rate": 0.6776859504132231
+    },
+    "E3": {
+      "rows": 121,
+      "accepted": 81,
+      "fill_rate": 0.6694214876033058
+    },
+    "E4": {
+      "rows": 121,
+      "accepted": 56,
+      "fill_rate": 0.4628099173553719
+    },
+    "E5": {
+      "rows": 121,
+      "accepted": 79,
+      "fill_rate": 0.6528925619834711
+    },
+    "E6": {
+      "rows": 121,
+      "accepted": 54,
+      "fill_rate": 0.4462809917355372
+    },
+    "CONTROL_IMMEDIATE": {
+      "rows": 121,
+      "accepted": 98,
+      "fill_rate": 0.8099173553719008
+    },
+    "CONTROL_RANDOM": {
+      "rows": 1096,
+      "accepted": 1096,
+      "fill_rate": 9.057851239669422
+    },
+    "CONTROL_NONCONTEXT": {
+      "rows": 1130,
+      "accepted": 1130,
+      "fill_rate": 9.338842975206612
+    }
+  }
+}

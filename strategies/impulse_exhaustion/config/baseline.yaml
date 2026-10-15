@@ -1,0 +1,109 @@
+# =====================================================================
+# IMPULSE EXHAUSTION / ABSORPTION REVERSAL — BASELINE CONFIGURATION
+# Candidate #2.  Every value below was fixed from a-priori market-structure
+# reasoning BEFORE any P&L was computed.  Rationale: IMPULSE_EXHAUSTION_SPEC.md
+# =====================================================================
+spec_version: "impexh-1.0.0"
+
+instrument:
+  symbol_root: "NQ"
+  tick_size: 0.25
+  point_value_usd: 20.0
+
+data:
+  timestamp_field: "ts_event"        # exchange matching-engine time
+  event_grid_seconds: 1              # strategy state machine steps on 1s bars
+  band_start_et: "08:00"             # cached band (warm-up head room)
+  band_end_et: "16:15"
+  engine_start_et: "09:00"           # state machine begins (warm-up, no signals)
+  signal_start_et: "09:30"           # earliest permitted ENTRY
+  signal_end_et: "16:00"             # latest permitted ENTRY
+  bbo_required: true                 # candidate rejected if BBO is unavailable
+
+volatility:
+  vu_definition: "atr14_completed_1min"
+  atr_minutes: 14
+  vu_floor_points: 2.0               # 8 ticks - a safety rail, never binding in RTH
+
+impulse:
+  displacement_vu: 1.00              # >= 1.00 x VU
+  max_seconds: 90                    # within a trailing 90-second window
+  min_points: 5.0                    # absolute floor so a dead tape cannot signal
+
+extension:
+  dc_theta_vu: 0.25                  # directional-change threshold
+  dc_theta_min_points: 1.0           # 4 ticks
+  n_attempts: 3                      # High1 < High2 < High3  (short); mirror for long
+  max_seconds_from_impulse: 600      # all three peaks within 10 min of impulse start
+
+deterioration:
+  step_tolerance: 0.10               # each step may tick up by <=10% and still count
+  overall_drop: 0.20                 # leg3 must be <= 80% of leg1
+  require_volume: true               # BuyAgg1 > BuyAgg2 > BuyAgg3   (with tolerance)
+  require_efficiency: true           # progress-per-aggressive-contract deteriorates
+
+absorption:
+  definition: "agg_volume_per_tick_of_best_price_advance"
+  window: "final_extension_leg"
+  history_scope: "rth_same_direction"  # reference legs must themselves be RTH legs
+  history_len: 2000                  # ~2 RTH days of same-direction DC legs
+  history_min_obs: 500               # no signals until this much history exists
+  percentile_min: 0.70               # current reading must sit in the top 30%
+
+failed_continuation:
+  reversal_vu: 0.35                  # price must fall/rise 0.35 x VU from the extreme
+  arm_max_seconds: 300               # abandon if it does not happen within 5 min
+  cancel_on_new_extreme: true        # a higher high re-opens the evaluation
+
+entry:
+  mode: "first_trade_after_confirmation"
+  latency_ms: 250                    # identical to Phase 1
+  max_wait_ms: 60000
+
+stop:
+  mode: "ticks_beyond_exhaustion_extreme"
+  ticks: 4                           # 4 ticks = 1.00 NQ point
+  min_r_points: 2.0
+  min_r_vu: 0.15                     # stop must exceed 0.15 x VU
+  max_r_vu: 1.20                     # ... and stay under 1.20 x VU
+
+targets:
+  primary_r: 1.0
+  diagnostic_r: [1.25, 1.5, 2.0]
+  tp_fill_rule: "trade_through_by_one_tick"
+  sl_fill_rule: "touch_then_market"
+  resolution: "raw_trade_sequence"
+  max_hold_seconds: 3600
+  hard_exit_et: "16:00"
+
+portfolio:
+  max_concurrent_trades: 1
+  on_conflict: "SKIPPED_OVERLAP"
+
+cooldown:
+  min_seconds_after_candidate: 120
+  require_fresh_impulse: true        # new impulse leg must not overlap the previous one
+
+costs:
+  round_trip_points_grid: [0.0, 0.5, 1.0, 2.0]
+  primary_friction_points: 1.0
+
+reporting:
+  primary_window_et: ["09:30", "11:30"]
+  diagnostic_windows_et:
+    - ["09:30", "12:00"]
+    - ["09:30", "16:00"]
+  splits:
+    dev: ["2021-01-01", "2023-12-31"]
+    val: ["2024-01-01", "2024-12-31"]
+
+verdict:
+  window: "09:30-11:30"
+  target: "1R"
+  friction_points: 1.0
+  min_trades: 100
+  min_expectancy_r: 0.0
+  min_profit_factor: 1.10
+  min_win_rate: 0.50
+  ci_lower_gt: 0.50
+  binomial_p_lt: 0.05

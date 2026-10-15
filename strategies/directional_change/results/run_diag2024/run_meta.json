@@ -1,0 +1,21 @@
+{
+  "split": "diag2024",
+  "tag": "diag2024",
+  "start": "2024-01-01",
+  "end": "2024-12-31",
+  "spec_version": "dcevent-1.0.0",
+  "theta_vu": 0.5,
+  "is_contaminated_diagnostic": true,
+  "is_fresh_validation": false,
+  "trading_days": 255,
+  "runtime_s": 25.6,
+  "DC_A_signals": 220961,
+  "DC_A_accepted": 88120,
+  "DC_A_skipped": 132841,
+  "DC_B_signals": 129153,
+  "DC_B_accepted": 81956,
+  "DC_B_skipped": 47197,
+  "DC_C_signals": 30976,
+  "DC_C_accepted": 23787,
+  "DC_C_skipped": 7189
+}

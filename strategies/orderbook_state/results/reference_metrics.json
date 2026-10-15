@@ -1,0 +1,874 @@
+{
+  "opposite": {
+    "strategy": {
+      "n_trades": 2229,
+      "win_rate": 0.4988784208165096,
+      "expectancy_R": -0.038909825033647406
+    },
+    "opposite": {
+      "n_trades": 2229,
+      "win_rate": 0.4890085240017945,
+      "expectancy_R": -0.06298788694481833
+    },
+    "diff_ER": {
+      "stat": "expectancy_R",
+      "n_a": 2229,
+      "n_b": 2229,
+      "n_days": 222,
+      "mean_a": -0.038909825033647406,
+      "mean_b": -0.06298788694481833,
+      "diff": 0.02407806191117092,
+      "ci95_lo": -0.052812499999999984,
+      "ci95_hi": 0.10562356367253334,
+      "p_diff_le_0": 0.2719,
+      "n_boot": 10000
+    },
+    "diff_WR": {
+      "stat": "win_rate",
+      "n_a": 2229,
+      "n_b": 2229,
+      "n_days": 222,
+      "mean_a": 0.4988784208165096,
+      "mean_b": 0.4890085240017945,
+      "diff": 0.009869896814715118,
+      "ci95_lo": -0.029239343792441058,
+      "ci95_hi": 0.050598065947433594,
+      "p_diff_le_0": 0.3116,
+      "n_boot": 10000
+    }
+  },
+  "matched_random": {
+    "cross_day": {
+      "n_trades": 22290,
+      "win_rate": 0.5004486316733961,
+      "expectancy_R": -0.035682368775235555,
+      "diff_ER": {
+        "stat": "expectancy_R",
+        "n_a": 2229,
+        "n_b": 22290,
+        "n_days": 254,
+        "mean_a": -0.038909825033647406,
+        "mean_b": -0.035682368775235555,
+        "diff": -0.003227456258411851,
+        "ci95_lo": -0.044786782347826494,
+        "ci95_hi": 0.03963616879720468,
+        "p_diff_le_0": 0.5513,
+        "n_boot": 10000
+      },
+      "diff_WR": {
+        "stat": "win_rate",
+        "n_a": 2229,
+        "n_b": 22290,
+        "n_days": 254,
+        "mean_a": 0.4988784208165096,
+        "mean_b": 0.5004486316733961,
+        "diff": -0.0015702108568865225,
+        "ci95_lo": -0.02298213720083176,
+        "ci95_hi": 0.020399035772663866,
+        "p_diff_le_0": 0.5491,
+        "n_boot": 10000
+      }
+    },
+    "same_day_forward": {
+      "n_trades": 20396,
+      "win_rate": 0.49651892527946656,
+      "expectancy_R": -0.04611198274171408,
+      "diff_ER": {
+        "stat": "expectancy_R",
+        "n_a": 2229,
+        "n_b": 20396,
+        "n_days": 222,
+        "mean_a": -0.038909825033647406,
+        "mean_b": -0.04611198274171408,
+        "diff": 0.0072021577080666754,
+        "ci95_lo": -0.025738324968689708,
+        "ci95_hi": 0.03988038931834217,
+        "p_diff_le_0": 0.334,
+        "n_boot": 10000
+      }
+    }
+  },
+  "friction_sweep": {
+    "0.0": {
+      "n_trades": 2229,
+      "win_rate": 0.500224315836698,
+      "expectancy_R": 0.0010901749663526277,
+      "profit_factor_R": 1.0022297260097999
+    },
+    "0.5": {
+      "n_trades": 2229,
+      "win_rate": 0.4993270524899058,
+      "expectancy_R": -0.018909825033647378,
+      "profit_factor_R": 0.9620990729334333
+    },
+    "1.0": {
+      "n_trades": 2229,
+      "win_rate": 0.4988784208165096,
+      "expectancy_R": -0.038909825033647406,
+      "profit_factor_R": 0.9235475084403623
+    },
+    "2.0": {
+      "n_trades": 2229,
+      "win_rate": 0.4984297891431135,
+      "expectancy_R": -0.07890982503364742,
+      "profit_factor_R": 0.850828167007319
+    }
+  },
+  "prop_metrics": {
+    "n_trades": 2229,
+    "trades_per_day": 8.775590551181102,
+    "median_trades_per_day": 4.0,
+    "pct_zero_trade_days": 0.12598425196850394,
+    "pct_1_trade_days": 0.1220472440944882,
+    "pct_2_trade_days": 0.09055118110236221,
+    "pct_3plus_trade_days": 0.6614173228346457,
+    "win_rate": 0.4988784208165096,
+    "win_rate_ci95_lo": 0.47814133851641694,
+    "win_rate_ci95_hi": 0.5196193623249941,
+    "expectancy_R": -0.038909825033647406,
+    "R_per_day": -0.3414566929133861,
+    "median_R_per_day": 0.0,
+    "pct_profitable_days": 0.45045045045045046,
+    "max_daily_loss_R": -15.079999999999977,
+    "p95_daily_loss_R": -4.4785,
+    "max_drawdown_R": 100.37000000000126,
+    "longest_loss_streak": 12,
+    "longest_win_streak": 9,
+    "drawdown_recovery_days": Infinity,
+    "avg_hold_min": 2.842880425585819,
+    "median_hold_min": 1.6992369333902995,
+    "avg_MAE_points": 17.126626289816063,
+    "avg_MFE_points": 17.46276357110812,
+    "tp_hits": 1081,
+    "sl_hits": 1075,
+    "timeouts": 73,
+    "longs": 146,
+    "shorts": 2083,
+    "long_win_rate": 0.4589041095890411,
+    "short_win_rate": 0.5016802688430149,
+    "profit_factor_R": 0.9235475084403623,
+    "gross_ER": 0.0010901749663526277
+  },
+  "regime_diagnostics": {
+    "n_cells_examined": 63,
+    "tables": {
+      "bucket15m": [
+        {
+          "bucket15m": 0,
+          "n_trades": 463,
+          "win_rate": 0.48596112311015116,
+          "expectancy_R": -0.06548596112311017,
+          "total_R": -30.320000000000007,
+          "profit_factor": 0.8761286105323365,
+          "avg_MFE_points": 17.420626349892007,
+          "avg_MAE_points": 17.520518358531316,
+          "median_hold_min": 1.1170340220133463
+        },
+        {
+          "bucket15m": 1,
+          "n_trades": 374,
+          "win_rate": 0.5026737967914439,
+          "expectancy_R": -0.02852941176470591,
+          "total_R": -10.67000000000001,
+          "profit_factor": 0.9438805028138642,
+          "avg_MFE_points": 17.99264705882353,
+          "avg_MAE_points": 16.844251336898395,
+          "median_hold_min": 1.390029525756836
+        },
+        {
+          "bucket15m": 2,
+          "n_trades": 370,
+          "win_rate": 0.5378378378378378,
+          "expectancy_R": 0.03827027027027024,
+          "total_R": 14.15999999999999,
+          "profit_factor": 1.081085724102388,
+          "avg_MFE_points": 18.282432432432433,
+          "avg_MAE_points": 16.936486486486487,
+          "median_hold_min": 1.617462158203125
+        },
+        {
+          "bucket15m": 3,
+          "n_trades": 228,
+          "win_rate": 0.5175438596491229,
+          "expectancy_R": -0.01912280701754389,
+          "total_R": -4.3600000000000065,
+          "profit_factor": 0.9616635892024972,
+          "avg_MFE_points": 17.532894736842106,
+          "avg_MAE_points": 16.8125,
+          "median_hold_min": 1.8744357426961262
+        },
+        {
+          "bucket15m": 4,
+          "n_trades": 207,
+          "win_rate": 0.5120772946859904,
+          "expectancy_R": -0.02304347826086959,
+          "total_R": -4.770000000000005,
+          "profit_factor": 0.9538729329852045,
+          "avg_MFE_points": 17.516908212560388,
+          "avg_MAE_points": 17.202898550724637,
+          "median_hold_min": 1.8359156290690104
+        },
+        {
+          "bucket15m": 5,
+          "n_trades": 190,
+          "win_rate": 0.5105263157894737,
+          "expectancy_R": -0.011105263157894774,
+          "total_R": -2.110000000000007,
+          "profit_factor": 0.9775555791937028,
+          "avg_MFE_points": 17.227631578947367,
+          "avg_MAE_points": 17.00263157894737,
+          "median_hold_min": 2.166863123575846
+        },
+        {
+          "bucket15m": 6,
+          "n_trades": 198,
+          "win_rate": 0.46464646464646464,
+          "expectancy_R": -0.10146464646464648,
+          "total_R": -20.090000000000003,
+          "profit_factor": 0.8090122635231486,
+          "avg_MFE_points": 16.30176767676768,
+          "avg_MAE_points": 17.01388888888889,
+          "median_hold_min": 2.5357147216796876
+        },
+        {
+          "bucket15m": 7,
+          "n_trades": 199,
+          "win_rate": 0.4371859296482412,
+          "expectancy_R": -0.14356783919597993,
+          "total_R": -28.570000000000007,
+          "profit_factor": 0.7368275607958733,
+          "avg_MFE_points": 16.28391959798995,
+          "avg_MAE_points": 17.605527638190956,
+          "median_hold_min": 2.9131235758463543
+        }
+      ],
+      "hour": [
+        {
+          "hour": "hour1",
+          "n_trades": 1435,
+          "win_rate": 0.5087108013937283,
+          "expectancy_R": -0.021735191637630685,
+          "total_R": -31.190000000000033,
+          "profit_factor": 0.9568758122943339,
+          "avg_MFE_points": 17.809756097560975,
+          "avg_MAE_points": 17.081184668989547,
+          "median_hold_min": 1.430690383911133
+        },
+        {
+          "hour": "hour2",
+          "n_trades": 794,
+          "win_rate": 0.4811083123425693,
+          "expectancy_R": -0.06994962216624688,
+          "total_R": -55.54000000000002,
+          "profit_factor": 0.8649220517061069,
+          "avg_MFE_points": 16.83564231738035,
+          "avg_MAE_points": 17.20875314861461,
+          "median_hold_min": 2.3236821492513022
+        }
+      ],
+      "dir_label": [
+        {
+          "dir_label": "LONG",
+          "n_trades": 146,
+          "win_rate": 0.4589041095890411,
+          "expectancy_R": -0.08773972602739728,
+          "total_R": -12.810000000000004,
+          "profit_factor": 0.8054965077436987,
+          "avg_MFE_points": 15.63527397260274,
+          "avg_MAE_points": 15.232876712328768,
+          "median_hold_min": 2.797847620646159
+        },
+        {
+          "dir_label": "SHORT",
+          "n_trades": 2083,
+          "win_rate": 0.5016802688430149,
+          "expectancy_R": -0.03548727796447434,
+          "total_R": -73.92000000000004,
+          "profit_factor": 0.9308234369297285,
+          "avg_MFE_points": 17.590854536725875,
+          "avg_MAE_points": 17.259361497839656,
+          "median_hold_min": 1.6522539774576823
+        }
+      ],
+      "vol_q": [
+        {
+          "vol_q": 1,
+          "n_trades": 557,
+          "win_rate": 0.4955116696588869,
+          "expectancy_R": -0.031238779174147253,
+          "total_R": -17.40000000000002,
+          "profit_factor": 0.9342353919419457,
+          "avg_MFE_points": 16.922800718132855,
+          "avg_MAE_points": 16.40439856373429,
+          "median_hold_min": 2.479966227213542
+        },
+        {
+          "vol_q": 2,
+          "n_trades": 557,
+          "win_rate": 0.5152603231597845,
+          "expectancy_R": -0.011974865350089785,
+          "total_R": -6.670000000000011,
+          "profit_factor": 0.9761913260753168,
+          "avg_MFE_points": 17.90439856373429,
+          "avg_MAE_points": 17.330341113105924,
+          "median_hold_min": 2.194433848063151
+        },
+        {
+          "vol_q": 3,
+          "n_trades": 557,
+          "win_rate": 0.4991023339317774,
+          "expectancy_R": -0.0427289048473968,
+          "total_R": -23.800000000000015,
+          "profit_factor": 0.9181230218797303,
+          "avg_MFE_points": 17.463195691202873,
+          "avg_MAE_points": 17.211400359066428,
+          "median_hold_min": 1.6126398722330728
+        },
+        {
+          "vol_q": 4,
+          "n_trades": 558,
+          "win_rate": 0.48566308243727596,
+          "expectancy_R": -0.06964157706093192,
+          "total_R": -38.860000000000014,
+          "profit_factor": 0.8700421376496555,
+          "avg_MFE_points": 17.56048387096774,
+          "avg_MAE_points": 17.559587813620073,
+          "median_hold_min": 0.9601289431254069
+        }
+      ],
+      "spread_ticks_i": [
+        {
+          "spread_ticks_i": 1,
+          "n_trades": 60,
+          "win_rate": 0.65,
+          "expectancy_R": 0.2776666666666667,
+          "total_R": 16.66,
+          "profit_factor": 1.8317523714428356,
+          "avg_MFE_points": 20.441666666666666,
+          "avg_MAE_points": 15.725,
+          "median_hold_min": 2.6734530131022134
+        },
+        {
+          "spread_ticks_i": 2,
+          "n_trades": 807,
+          "win_rate": 0.4969021065675341,
+          "expectancy_R": -0.04224287484510535,
+          "total_R": -34.09000000000002,
+          "profit_factor": 0.9171849188611408,
+          "avg_MFE_points": 17.341387856257743,
+          "avg_MAE_points": 17.219330855018587,
+          "median_hold_min": 2.2031049092610675
+        },
+        {
+          "spread_ticks_i": 3,
+          "n_trades": 901,
+          "win_rate": 0.4983351831298557,
+          "expectancy_R": -0.043629300776914556,
+          "total_R": -39.31000000000002,
+          "profit_factor": 0.9148765699436986,
+          "avg_MFE_points": 17.263318534961154,
+          "avg_MAE_points": 17.11625971143174,
+          "median_hold_min": 1.540750249226888
+        },
+        {
+          "spread_ticks_i": 4,
+          "n_trades": 335,
+          "win_rate": 0.4925373134328358,
+          "expectancy_R": -0.053791044776119415,
+          "total_R": -18.020000000000003,
+          "profit_factor": 0.8961383285302593,
+          "avg_MFE_points": 17.621641791044777,
+          "avg_MAE_points": 17.261194029850746,
+          "median_hold_min": 1.0209334055582682
+        },
+        {
+          "spread_ticks_i": 5,
+          "n_trades": 72,
+          "win_rate": 0.4583333333333333,
+          "expectancy_R": -0.08958333333333338,
+          "total_R": -6.450000000000003,
+          "profit_factor": 0.8299947285187138,
+          "avg_MFE_points": 18.34722222222222,
+          "avg_MAE_points": 16.6875,
+          "median_hold_min": 1.3517645517985026
+        },
+        {
+          "spread_ticks_i": 6,
+          "n_trades": 30,
+          "win_rate": 0.4,
+          "expectancy_R": -0.21800000000000003,
+          "total_R": -6.540000000000001,
+          "profit_factor": 0.6378737541528239,
+          "avg_MFE_points": 15.958333333333334,
+          "avg_MAE_points": 19.0,
+          "median_hold_min": 1.414922841389974
+        },
+        {
+          "spread_ticks_i": 7,
+          "n_trades": 13,
+          "win_rate": 0.5384615384615384,
+          "expectancy_R": 0.03538461538461535,
+          "total_R": 0.4599999999999995,
+          "profit_factor": 1.073482428115016,
+          "avg_MFE_points": 19.076923076923077,
+          "avg_MAE_points": 16.78846153846154,
+          "median_hold_min": 1.7083543141682942
+        },
+        {
+          "spread_ticks_i": 8,
+          "n_trades": 9,
+          "win_rate": 0.5555555555555556,
+          "expectancy_R": 0.07111111111111107,
+          "total_R": 0.6399999999999997,
+          "profit_factor": 1.1538461538461537,
+          "avg_MFE_points": 17.11111111111111,
+          "avg_MAE_points": 11.694444444444445,
+          "median_hold_min": 0.809467061360677
+        },
+        {
+          "spread_ticks_i": 9,
+          "n_trades": 1,
+          "win_rate": 0.0,
+          "expectancy_R": -1.04,
+          "total_R": -1.04,
+          "profit_factor": 0.0,
+          "avg_MFE_points": 19.0,
+          "avg_MAE_points": 25.0,
+          "median_hold_min": 0.8759883880615235
+        },
+        {
+          "spread_ticks_i": 11,
+          "n_trades": 1,
+          "win_rate": 1.0,
+          "expectancy_R": 0.96,
+          "total_R": 0.96,
+          "profit_factor": Infinity,
+          "avg_MFE_points": 25.25,
+          "avg_MAE_points": 11.5,
+          "median_hold_min": 0.563235346476237
+        }
+      ],
+      "bbosz_q": [
+        {
+          "bbosz_q": 1,
+          "n_trades": 557,
+          "win_rate": 0.49730700179533216,
+          "expectancy_R": -0.03745062836624778,
+          "total_R": -20.860000000000014,
+          "profit_factor": 0.9265648102513554,
+          "avg_MFE_points": 17.141382405745063,
+          "avg_MAE_points": 17.268850987432675,
+          "median_hold_min": 1.4635218302408854
+        },
+        {
+          "bbosz_q": 2,
+          "n_trades": 557,
+          "win_rate": 0.4883303411131059,
+          "expectancy_R": -0.058635547576301635,
+          "total_R": -32.66000000000001,
+          "profit_factor": 0.8873171404913055,
+          "avg_MFE_points": 17.460951526032314,
+          "avg_MAE_points": 17.069120287253142,
+          "median_hold_min": 1.5013903299967448
+        },
+        {
+          "bbosz_q": 3,
+          "n_trades": 557,
+          "win_rate": 0.5044883303411131,
+          "expectancy_R": -0.035565529622980284,
+          "total_R": -19.810000000000016,
+          "profit_factor": 0.9303274364295009,
+          "avg_MFE_points": 17.796678635547575,
+          "avg_MAE_points": 17.183123877917414,
+          "median_hold_min": 1.5983239491780599
+        },
+        {
+          "bbosz_q": 4,
+          "n_trades": 558,
+          "win_rate": 0.5053763440860215,
+          "expectancy_R": -0.024014336917562745,
+          "total_R": -13.400000000000013,
+          "profit_factor": 0.9514844315713251,
+          "avg_MFE_points": 17.45206093189964,
+          "avg_MAE_points": 16.985663082437277,
+          "median_hold_min": 2.2750587463378906
+        }
+      ],
+      "imb_q": [
+        {
+          "imb_q": 1,
+          "n_trades": 557,
+          "win_rate": 0.5044883303411131,
+          "expectancy_R": -0.03210053859964097,
+          "total_R": -17.880000000000017,
+          "profit_factor": 0.9367616891844097,
+          "avg_MFE_points": 17.70287253141831,
+          "avg_MAE_points": 17.245511669658885,
+          "median_hold_min": 1.6226141611735025
+        },
+        {
+          "imb_q": 2,
+          "n_trades": 557,
+          "win_rate": 0.5026929982046678,
+          "expectancy_R": -0.03811490125673253,
+          "total_R": -21.230000000000018,
+          "profit_factor": 0.9252517428350117,
+          "avg_MFE_points": 17.52737881508079,
+          "avg_MAE_points": 17.114901256732495,
+          "median_hold_min": 1.5910235087076823
+        },
+        {
+          "imb_q": 3,
+          "n_trades": 557,
+          "win_rate": 0.5062836624775583,
+          "expectancy_R": -0.024506283662477577,
+          "total_R": -13.650000000000011,
+          "profit_factor": 0.9508249873910224,
+          "avg_MFE_points": 17.34245960502693,
+          "avg_MAE_points": 16.96274685816876,
+          "median_hold_min": 1.702800496419271
+        },
+        {
+          "imb_q": 4,
+          "n_trades": 558,
+          "win_rate": 0.482078853046595,
+          "expectancy_R": -0.060878136200716866,
+          "total_R": -33.97000000000001,
+          "profit_factor": 0.8828984108380158,
+          "avg_MFE_points": 17.27867383512545,
+          "avg_MAE_points": 17.183243727598565,
+          "median_hold_min": 1.8298064549763997
+        }
+      ],
+      "micro_q": [
+        {
+          "micro_q": 1,
+          "n_trades": 557,
+          "win_rate": 0.5098743267504489,
+          "expectancy_R": -0.02612208258527831,
+          "total_R": -14.550000000000018,
+          "profit_factor": 0.9481468282252317,
+          "avg_MFE_points": 17.796229802513466,
+          "avg_MAE_points": 17.10682226211849,
+          "median_hold_min": 1.6226141611735025
+        },
+        {
+          "micro_q": 2,
+          "n_trades": 557,
+          "win_rate": 0.49730700179533216,
+          "expectancy_R": -0.04409335727109518,
+          "total_R": -24.560000000000016,
+          "profit_factor": 0.9141738887335756,
+          "avg_MFE_points": 17.434021543985637,
+          "avg_MAE_points": 17.253590664272892,
+          "median_hold_min": 1.5910235087076823
+        },
+        {
+          "micro_q": 3,
+          "n_trades": 557,
+          "win_rate": 0.49730700179533216,
+          "expectancy_R": -0.03973070017953323,
+          "total_R": -22.13000000000001,
+          "profit_factor": 0.9213826423674021,
+          "avg_MFE_points": 17.211849192100537,
+          "avg_MAE_points": 16.92235188509874,
+          "median_hold_min": 1.8260782877604167
+        },
+        {
+          "micro_q": 4,
+          "n_trades": 558,
+          "win_rate": 0.4910394265232975,
+          "expectancy_R": -0.04568100358422941,
+          "total_R": -25.490000000000013,
+          "profit_factor": 0.9109301838004054,
+          "avg_MFE_points": 17.40905017921147,
+          "avg_MAE_points": 17.22356630824373,
+          "median_hold_min": 1.749466896057129
+        }
+      ],
+      "ofi_q": [
+        {
+          "ofi_q": 1,
+          "n_trades": 557,
+          "win_rate": 0.4991023339317774,
+          "expectancy_R": -0.036247755834829476,
+          "total_R": -20.19000000000002,
+          "profit_factor": 0.9295189555260769,
+          "avg_MFE_points": 17.56822262118492,
+          "avg_MAE_points": 17.46543985637343,
+          "median_hold_min": 1.6226141611735025
+        },
+        {
+          "ofi_q": 2,
+          "n_trades": 557,
+          "win_rate": 0.45601436265709155,
+          "expectancy_R": -0.12468581687612211,
+          "total_R": -69.45000000000002,
+          "profit_factor": 0.7752208952325469,
+          "avg_MFE_points": 17.073608617594253,
+          "avg_MAE_points": 17.776032315978455,
+          "median_hold_min": 1.7831000010172526
+        },
+        {
+          "ofi_q": 3,
+          "n_trades": 557,
+          "win_rate": 0.5152603231597845,
+          "expectancy_R": -0.006858168761220857,
+          "total_R": -3.820000000000017,
+          "profit_factor": 0.9856488090765647,
+          "avg_MFE_points": 16.9762118491921,
+          "avg_MAE_points": 16.114901256732495,
+          "median_hold_min": 1.7596179962158203
+        },
+        {
+          "ofi_q": 4,
+          "n_trades": 558,
+          "win_rate": 0.525089605734767,
+          "expectancy_R": 0.012060931899641553,
+          "total_R": 6.729999999999986,
+          "profit_factor": 1.024668279451653,
+          "avg_MFE_points": 18.23163082437276,
+          "avg_MAE_points": 17.150089605734767,
+          "median_hold_min": 1.6262093861897786
+        }
+      ],
+      "conf_q": [
+        {
+          "conf_q": 1,
+          "n_trades": 557,
+          "win_rate": 0.4955116696588869,
+          "expectancy_R": -0.044991023339317794,
+          "total_R": -25.060000000000013,
+          "profit_factor": 0.9116298751675013,
+          "avg_MFE_points": 17.64048473967684,
+          "avg_MAE_points": 17.196588868940754,
+          "median_hold_min": 2.1442080179850262
+        },
+        {
+          "conf_q": 2,
+          "n_trades": 557,
+          "win_rate": 0.48114901256732495,
+          "expectancy_R": -0.06980251346499107,
+          "total_R": -38.880000000000024,
+          "profit_factor": 0.8662308618613452,
+          "avg_MFE_points": 17.174147217235188,
+          "avg_MAE_points": 17.31552962298025,
+          "median_hold_min": 1.8531585693359376
+        },
+        {
+          "conf_q": 3,
+          "n_trades": 557,
+          "win_rate": 0.5008976660682226,
+          "expectancy_R": -0.03617594254937166,
+          "total_R": -20.150000000000016,
+          "profit_factor": 0.9290717730296737,
+          "avg_MFE_points": 17.219928186714544,
+          "avg_MAE_points": 16.93222621184919,
+          "median_hold_min": 1.42744140625
+        },
+        {
+          "conf_q": 4,
+          "n_trades": 558,
+          "win_rate": 0.517921146953405,
+          "expectancy_R": -0.004731182795698952,
+          "total_R": -2.640000000000015,
+          "profit_factor": 0.9904385933142588,
+          "avg_MFE_points": 17.815860215053764,
+          "avg_MAE_points": 17.06227598566308,
+          "median_hold_min": 1.372460174560547
+        }
+      ],
+      "month": [
+        {
+          "month": 1,
+          "n_trades": 320,
+          "win_rate": 0.478125,
+          "expectancy_R": -0.08028125000000003,
+          "total_R": -25.69000000000001,
+          "profit_factor": 0.849774866966844,
+          "avg_MFE_points": 16.7640625,
+          "avg_MAE_points": 18.00546875,
+          "median_hold_min": 1.6813163121541341
+        },
+        {
+          "month": 2,
+          "n_trades": 220,
+          "win_rate": 0.4772727272727273,
+          "expectancy_R": -0.07840909090909094,
+          "total_R": -17.250000000000007,
+          "profit_factor": 0.8527780148502176,
+          "avg_MFE_points": 17.806818181818183,
+          "avg_MAE_points": 17.630681818181817,
+          "median_hold_min": 1.6313093821207683
+        },
+        {
+          "month": 3,
+          "n_trades": 142,
+          "win_rate": 0.43661971830985913,
+          "expectancy_R": -0.16429577464788733,
+          "total_R": -23.330000000000002,
+          "profit_factor": 0.7184067592033796,
+          "avg_MFE_points": 16.471830985915492,
+          "avg_MAE_points": 18.68661971830986,
+          "median_hold_min": 1.7102702458699544
+        },
+        {
+          "month": 4,
+          "n_trades": 254,
+          "win_rate": 0.5590551181102362,
+          "expectancy_R": 0.08271653543307085,
+          "total_R": 21.009999999999994,
+          "profit_factor": 1.1829979966901838,
+          "avg_MFE_points": 18.804133858267715,
+          "avg_MAE_points": 16.125984251968504,
+          "median_hold_min": 1.8352945963541667
+        },
+        {
+          "month": 5,
+          "n_trades": 566,
+          "win_rate": 0.49469964664310956,
+          "expectancy_R": -0.05399293286219084,
+          "total_R": -30.560000000000016,
+          "profit_factor": 0.8967881387415988,
+          "avg_MFE_points": 17.466872791519435,
+          "avg_MAE_points": 17.24602473498233,
+          "median_hold_min": 1.1480248769124348
+        },
+        {
+          "month": 6,
+          "n_trades": 120,
+          "win_rate": 0.475,
+          "expectancy_R": -0.08033333333333337,
+          "total_R": -9.640000000000004,
+          "profit_factor": 0.8429455848810687,
+          "avg_MFE_points": 17.335416666666667,
+          "avg_MAE_points": 17.025,
+          "median_hold_min": 2.7138572692871095
+        },
+        {
+          "month": 7,
+          "n_trades": 127,
+          "win_rate": 0.5118110236220472,
+          "expectancy_R": -0.020787401574803185,
+          "total_R": -2.6400000000000046,
+          "profit_factor": 0.9575357889657391,
+          "avg_MFE_points": 17.537401574803148,
+          "avg_MAE_points": 16.864173228346456,
+          "median_hold_min": 2.156358846028646
+        },
+        {
+          "month": 8,
+          "n_trades": 89,
+          "win_rate": 0.5842696629213483,
+          "expectancy_R": 0.11494382022471906,
+          "total_R": 10.229999999999997,
+          "profit_factor": 1.2655763239875388,
+          "avg_MFE_points": 17.70505617977528,
+          "avg_MAE_points": 15.845505617977528,
+          "median_hold_min": 2.132450230916341
+        },
+        {
+          "month": 9,
+          "n_trades": 103,
+          "win_rate": 0.5242718446601942,
+          "expectancy_R": 0.03592233009708734,
+          "total_R": 3.6999999999999957,
+          "profit_factor": 1.0804697694649847,
+          "avg_MFE_points": 17.546116504854368,
+          "avg_MAE_points": 16.04368932038835,
+          "median_hold_min": 3.0283131917317707
+        },
+        {
+          "month": 10,
+          "n_trades": 176,
+          "win_rate": 0.4659090909090909,
+          "expectancy_R": -0.09715909090909093,
+          "total_R": -17.100000000000005,
+          "profit_factor": 0.8215403882279274,
+          "avg_MFE_points": 16.829545454545453,
+          "avg_MAE_points": 17.380681818181817,
+          "median_hold_min": 1.5577634811401366
+        },
+        {
+          "month": 11,
+          "n_trades": 49,
+          "win_rate": 0.5510204081632653,
+          "expectancy_R": 0.11326530612244896,
+          "total_R": 5.549999999999999,
+          "profit_factor": 1.3027823240589198,
+          "avg_MFE_points": 17.836734693877553,
+          "avg_MAE_points": 13.66326530612245,
+          "median_hold_min": 2.844047037760417
+        },
+        {
+          "month": 12,
+          "n_trades": 63,
+          "win_rate": 0.5238095238095238,
+          "expectancy_R": -0.016031746031746043,
+          "total_R": -1.0100000000000007,
+          "profit_factor": 0.9666666666666667,
+          "avg_MFE_points": 17.69047619047619,
+          "avg_MAE_points": 16.634920634920636,
+          "median_hold_min": 2.0931173960367837
+        }
+      ],
+      "weekday": [
+        {
+          "weekday": 1,
+          "n_trades": 436,
+          "win_rate": 0.5252293577981652,
+          "expectancy_R": 0.0180504587155963,
+          "total_R": 7.869999999999987,
+          "profit_factor": 1.0392949870181745,
+          "avg_MFE_points": 17.66169724770642,
+          "avg_MAE_points": 16.006307339449542,
+          "median_hold_min": 1.6393069585164388
+        },
+        {
+          "weekday": 2,
+          "n_trades": 350,
+          "win_rate": 0.5142857142857142,
+          "expectancy_R": -0.009971428571428605,
+          "total_R": -3.4900000000000118,
+          "profit_factor": 0.9800503029610153,
+          "avg_MFE_points": 18.032857142857143,
+          "avg_MAE_points": 17.264285714285716,
+          "median_hold_min": 1.97878843943278
+        },
+        {
+          "weekday": 3,
+          "n_trades": 357,
+          "win_rate": 0.46218487394957986,
+          "expectancy_R": -0.11392156862745101,
+          "total_R": -40.67000000000001,
+          "profit_factor": 0.7941801619433199,
+          "avg_MFE_points": 16.975490196078432,
+          "avg_MAE_points": 17.62044817927171,
+          "median_hold_min": 1.66213747660319
+        },
+        {
+          "weekday": 4,
+          "n_trades": 540,
+          "win_rate": 0.48518518518518516,
+          "expectancy_R": -0.0642777777777778,
+          "total_R": -34.71000000000001,
+          "profit_factor": 0.8770848826091575,
+          "avg_MFE_points": 17.483796296296298,
+          "avg_MAE_points": 17.636574074074073,
+          "median_hold_min": 1.7249312082926431
+        },
+        {
+          "weekday": 5,
+          "n_trades": 546,
+          "win_rate": 0.5054945054945055,
+          "expectancy_R": -0.02880952380952385,
+          "total_R": -15.730000000000022,
+          "profit_factor": 0.943664493947425,
+          "avg_MFE_points": 17.236263736263737,
+          "avg_MAE_points": 17.10576923076923,
+          "median_hold_min": 1.5573563893636069
+        }
+      ]
+    }
+  }
+}

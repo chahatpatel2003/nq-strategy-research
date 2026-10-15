@@ -1,0 +1,48 @@
+{
+  "frozen_id": "fastslow-1.0.0+5980044a44eebf7b",
+  "split": "validation 2024",
+  "hypothesis": "variant=ANY target=1R friction=1.0 pt round trip",
+  "metrics": {
+    "n_trades": 159,
+    "wins": 72,
+    "losses": 87,
+    "win_rate": 0.4528301886792453,
+    "win_rate_ci95_lo": 0.3774818676716594,
+    "win_rate_ci95_hi": 0.5304039980738902,
+    "breakeven_win_rate": 0.5,
+    "p_value_gt_breakeven": 0.8978302053308912,
+    "expectancy_R": -0.18437365290908442,
+    "expectancy_points": -1.4559748427672956,
+    "profit_factor": 0.8244882486732373,
+    "total_points": -231.5,
+    "max_drawdown_R": 32.026265308743916,
+    "t_stat_R": -2.31812637025916
+  },
+  "gate_checks": {
+    "n_trades >= 100": {
+      "pass": true,
+      "value": 159
+    },
+    "win-rate 95% CI low > 0.50": {
+      "pass": false,
+      "value": 0.3775
+    },
+    "expectancy_R > 0": {
+      "pass": false,
+      "value": -0.1844
+    },
+    "profit factor > 1.10": {
+      "pass": false,
+      "value": 0.8245
+    },
+    "binomial p < 0.05": {
+      "pass": false,
+      "value": 0.8978
+    },
+    "CI high >= break-even": {
+      "pass": true,
+      "value": 0.5304
+    }
+  },
+  "verdict": "FAIL"
+}

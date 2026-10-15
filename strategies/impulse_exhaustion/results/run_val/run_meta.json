@@ -1,0 +1,18 @@
+{
+  "split": "val",
+  "tag": "val",
+  "ablation": null,
+  "entry_stage": "FAILED_CONTINUATION",
+  "start": "2024-01-01",
+  "end": "2024-12-31",
+  "spec_version": "impexh-1.0.0",
+  "trading_days": 255,
+  "signals": 45,
+  "rejected_candidates": 67447,
+  "runtime_s": 142.4,
+  "primary_target_only": false,
+  "count_only": false,
+  "accepted": 45,
+  "skipped": 0,
+  "skip_reasons": {}
+}

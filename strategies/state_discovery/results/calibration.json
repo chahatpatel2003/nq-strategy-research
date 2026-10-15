@@ -1,0 +1,22 @@
+{
+  "train2021": {
+    "n_buckets": 4,
+    "spearman_edge_vs_expectancy": 0.19999999999999998
+  },
+  "select2022": {
+    "n_buckets": 4,
+    "spearman_edge_vs_expectancy": 0.19999999999999998
+  },
+  "itest2023": {
+    "n_buckets": 4,
+    "spearman_edge_vs_expectancy": 0.19999999999999998
+  },
+  "contam2024": {
+    "n_buckets": 4,
+    "spearman_edge_vs_expectancy": 0.19999999999999998
+  },
+  "contam2025h2": {
+    "n_buckets": 4,
+    "spearman_edge_vs_expectancy": -0.39999999999999997
+  }
+}

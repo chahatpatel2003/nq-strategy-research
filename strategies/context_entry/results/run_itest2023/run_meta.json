@@ -1,0 +1,61 @@
+{
+  "split": "itest2023",
+  "start": "2023-01-01",
+  "end": "2023-12-31",
+  "role": "DEVELOPMENT (contaminated: Phase-5 rejected the candidate here)",
+  "context_model": "r4p0:A_logit:top2",
+  "tau": 0.1799381018935508,
+  "r_tag": "r4p0",
+  "seed": 20260821,
+  "n_days": 254,
+  "n_contexts": 93,
+  "n_rows": 30480,
+  "runtime_s": 2.6,
+  "books": {
+    "E1": {
+      "rows": 93,
+      "accepted": 69,
+      "fill_rate": 0.7419354838709677
+    },
+    "E2": {
+      "rows": 93,
+      "accepted": 62,
+      "fill_rate": 0.6666666666666666
+    },
+    "E3": {
+      "rows": 93,
+      "accepted": 62,
+      "fill_rate": 0.6666666666666666
+    },
+    "E4": {
+      "rows": 93,
+      "accepted": 44,
+      "fill_rate": 0.4731182795698925
+    },
+    "E5": {
+      "rows": 93,
+      "accepted": 62,
+      "fill_rate": 0.6666666666666666
+    },
+    "E6": {
+      "rows": 93,
+      "accepted": 43,
+      "fill_rate": 0.46236559139784944
+    },
+    "CONTROL_IMMEDIATE": {
+      "rows": 93,
+      "accepted": 80,
+      "fill_rate": 0.8602150537634409
+    },
+    "CONTROL_RANDOM": {
+      "rows": 803,
+      "accepted": 803,
+      "fill_rate": 8.634408602150538
+    },
+    "CONTROL_NONCONTEXT": {
+      "rows": 930,
+      "accepted": 930,
+      "fill_rate": 10.0
+    }
+  }
+}

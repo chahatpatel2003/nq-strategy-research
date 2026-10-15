@@ -1,0 +1,22 @@
+{
+  "spec_version": "fastslow-1.0.0",
+  "frozen_id": "fastslow-1.0.0+5980044a44eebf7b",
+  "combined_sha256": "5980044a44eebf7b7fb18268cecde194a7f986579bd9c26ce87eb5582f34fbc8",
+  "frozen_utc": "2026-08-19T22:31:52.661652+00:00",
+  "files": {
+    "config/fast_slow_baseline.yaml": "f171eb547e71b9d4600b79a67788a310e58d630ab2d2ee984b8888839c2d1a73",
+    "src/nqr/holdout.py": "c5afa82417538cbea78370f707a95fc065676ddb3b20f15e35a19003d15188c6",
+    "src/nqr/paths.py": "1a60e925fdfef9ba90f34b1388ce104eea994cfd594fe0d6b1f686e814d3af0b",
+    "src/nqr/sessions/calendar.py": "cad87a736641eaddff692a4b1acf49c39555d9d98c0f0e640ec694e121d21e48",
+    "src/nqr/data/contracts.py": "b8d8adf70cc3afc06cf0c24327f665b545c33cb2c2b426eea544762851529224",
+    "src/nqr/data/cache.py": "e7cf7be2d10be316ed35b518760e5118ea13a773ec01084c2bca51ae1aeb9c0d",
+    "src/nqr/levels/build.py": "4a0b25236163db9158376c20287625e18643a65b49c789d00b7704d912b39f8a",
+    "src/nqr/signals/triggers.py": "feee750108bec43c4f6d98f355b00dbdf27cec99d785bcc539c78d68228d7fde",
+    "src/nqr/signals/fast_slow.py": "c0446f0f25e9ea619a8a9cd97fd904d9a9c7338c854db72deacdeec7b24fd504",
+    "src/nqr/backtest/engine.py": "20b639972c944d708e10acb6e441f719f59e1c9fb122729cc9dbad77e938d555",
+    "src/nqr/execution/simulate.py": "32c5956428918309a21b94ca3a2e54c03864b1273fd8746cad8acaff345966b9",
+    "strategies/fast_slow/runner.py": "738becd8f86de6689d7b8a4d27b19c771bab74b0bfcd5129ba0a7664d3ccd42e",
+    "scripts/01_build_cache.py": "5f44965b652731b598b8add8f19bfd061a45ccf1554682f334b2b766b78e22c1",
+    "scripts/02_run_fast_slow.py": "fe66ba5d74129d20347189ea70c7d69fa13f0cdacb93ef276b2d92203f8d8de4"
+  }
+}

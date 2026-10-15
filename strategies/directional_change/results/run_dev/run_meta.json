@@ -1,0 +1,21 @@
+{
+  "split": "dev",
+  "tag": "dev",
+  "start": "2021-01-01",
+  "end": "2023-12-31",
+  "spec_version": "dcevent-1.0.0",
+  "theta_vu": 0.5,
+  "is_contaminated_diagnostic": false,
+  "is_fresh_validation": false,
+  "trading_days": 762,
+  "runtime_s": 78.9,
+  "DC_A_signals": 643758,
+  "DC_A_accepted": 263249,
+  "DC_A_skipped": 380509,
+  "DC_B_signals": 380685,
+  "DC_B_accepted": 246447,
+  "DC_B_skipped": 134238,
+  "DC_C_signals": 90903,
+  "DC_C_accepted": 71885,
+  "DC_C_skipped": 19018
+}

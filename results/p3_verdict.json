@@ -1,0 +1,164 @@
+{
+  "frozen_id": "dcevent-1.0.0.impl3+d33e5d5d116f1adb",
+  "split": "fresh validation 2025-07-01..2025-12-31",
+  "hypothesis": "window=09:30-11:30 target=1R friction=1.0 pt round trip, per family",
+  "families": {
+    "DC_A": {
+      "metrics": {
+        "n_trades": 15583,
+        "wins": 7512,
+        "losses": 8070,
+        "win_rate": 0.48206378746069434,
+        "win_rate_ci95_lo": 0.4742238122228553,
+        "win_rate_ci95_hi": 0.48991260364582234,
+        "p_value_gt_breakeven": 0.999996379733299,
+        "expectancy_R": -0.21441126144805675,
+        "median_R": -1.0626506024096385,
+        "expectancy_points": -1.2862861084881907,
+        "profit_factor": 0.7087721091647624,
+        "total_points": -20044.196428571475,
+        "breakeven_wr_at_friction": 0.566790177562092,
+        "max_drawdown_R": 3342.8187309742416,
+        "max_drawdown_R_daily": 3341.170687145067,
+        "longest_loss_streak": 15,
+        "t_stat_R": -26.513311170542284,
+        "trades_per_day_mean": 121.7421875,
+        "pct_profitable_days": 0.015625,
+        "worst_day_R": -92.48567863003524
+      },
+      "gate_checks": {
+        "trades >= 100": {
+          "pass": true,
+          "value": 15583
+        },
+        "win rate > 0.5": {
+          "pass": false,
+          "value": 0.4821
+        },
+        "95% CI lower bound > 0.5": {
+          "pass": false,
+          "value": 0.4742
+        },
+        "net expectancy > 0 R": {
+          "pass": false,
+          "value": -0.2144
+        },
+        "profit factor > 1.1": {
+          "pass": false,
+          "value": 0.7088
+        },
+        "binomial p < 0.05": {
+          "pass": false,
+          "value": 1.0
+        }
+      },
+      "family_verdict": "FAIL"
+    },
+    "DC_B": {
+      "metrics": {
+        "n_trades": 14603,
+        "wins": 7048,
+        "losses": 7554,
+        "win_rate": 0.4826405533109635,
+        "win_rate_ci95_lo": 0.47454151675189,
+        "win_rate_ci95_hi": 0.4907487206050825,
+        "p_value_gt_breakeven": 0.9999868999974169,
+        "expectancy_R": -0.2152449403514016,
+        "median_R": -1.0632911392405062,
+        "expectancy_points": -1.265305074299808,
+        "profit_factor": 0.7131229306804626,
+        "total_points": -18477.250000000095,
+        "breakeven_wr_at_friction": 0.566800910873985,
+        "max_drawdown_R": 3146.103679589366,
+        "max_drawdown_R_daily": 3143.221863951519,
+        "longest_loss_streak": 11,
+        "t_stat_R": -25.701991072305336,
+        "trades_per_day_mean": 114.0859375,
+        "pct_profitable_days": 0.0390625,
+        "worst_day_R": -82.64300072607979
+      },
+      "gate_checks": {
+        "trades >= 100": {
+          "pass": true,
+          "value": 14603
+        },
+        "win rate > 0.5": {
+          "pass": false,
+          "value": 0.4826
+        },
+        "95% CI lower bound > 0.5": {
+          "pass": false,
+          "value": 0.4745
+        },
+        "net expectancy > 0 R": {
+          "pass": false,
+          "value": -0.2152
+        },
+        "profit factor > 1.1": {
+          "pass": false,
+          "value": 0.7131
+        },
+        "binomial p < 0.05": {
+          "pass": false,
+          "value": 1.0
+        }
+      },
+      "family_verdict": "FAIL"
+    },
+    "DC_C": {
+      "metrics": {
+        "n_trades": 4182,
+        "wins": 1965,
+        "losses": 2217,
+        "win_rate": 0.46987087517934,
+        "win_rate_ci95_lo": 0.4547790221498944,
+        "win_rate_ci95_hi": 0.4850180288184437,
+        "p_value_gt_breakeven": 0.9999544941696443,
+        "expectancy_R": -0.24476126344943464,
+        "median_R": -1.0691254209229264,
+        "expectancy_points": -1.4527310924369703,
+        "profit_factor": 0.6739876616320463,
+        "total_points": -6075.321428571409,
+        "breakeven_wr_at_friction": 0.5678013208681182,
+        "max_drawdown_R": 1025.0852798044689,
+        "max_drawdown_R_daily": 1023.5916037455355,
+        "longest_loss_streak": 11,
+        "t_stat_R": -15.679804353220675,
+        "trades_per_day_mean": 32.671875,
+        "pct_profitable_days": 0.109375,
+        "worst_day_R": -28.777537656363013
+      },
+      "gate_checks": {
+        "trades >= 100": {
+          "pass": true,
+          "value": 4182
+        },
+        "win rate > 0.5": {
+          "pass": false,
+          "value": 0.4699
+        },
+        "95% CI lower bound > 0.5": {
+          "pass": false,
+          "value": 0.4548
+        },
+        "net expectancy > 0 R": {
+          "pass": false,
+          "value": -0.2448
+        },
+        "profit factor > 1.1": {
+          "pass": false,
+          "value": 0.674
+        },
+        "binomial p < 0.05": {
+          "pass": false,
+          "value": 1.0
+        }
+      },
+      "family_verdict": "FAIL"
+    }
+  },
+  "n_families_tested": 3,
+  "multiplicity_note": "3 families were tested; a Bonferroni-adjusted threshold would be 0.0167. The gate is applied exactly as pre-registered; this is reported for context only.",
+  "verdict": "FAIL",
+  "composite_note": "Families are evaluated separately and are never combined into a composite to manufacture a pass."
+}

@@ -1,0 +1,19 @@
+{
+  "n_rep": 20,
+  "model_key": "B_tree:depth=3",
+  "threshold_q": 0.2,
+  "observed_2022": {
+    "n_trades": 37667,
+    "win_rate": 0.5023495367297635,
+    "expectancy_R": -0.1394702502365397,
+    "profit_factor": 0.7975214726298493
+  },
+  "null_expectancy_R_mean": -0.15919200264247074,
+  "null_expectancy_R_sd": 0.004272569987917765,
+  "null_expectancy_R_min": -0.16912100027245303,
+  "null_expectancy_R_max": -0.1530209894951521,
+  "null_win_rate_mean": 0.49225280213812417,
+  "null_win_rate_sd": 0.001248982332663953,
+  "p_null_ge_observed_ER": 0.0,
+  "p_null_ge_observed_WR": 0.0
+}

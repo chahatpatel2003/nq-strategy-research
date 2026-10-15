@@ -1,0 +1,21 @@
+{
+  "split": "dev",
+  "tag": "dev",
+  "ablation": null,
+  "entry_stage": "FAILED_CONTINUATION",
+  "start": "2021-01-01",
+  "end": "2023-12-31",
+  "spec_version": "impexh-1.0.0",
+  "trading_days": 762,
+  "signals": 164,
+  "rejected_candidates": 194510,
+  "runtime_s": 125.0,
+  "primary_target_only": false,
+  "count_only": false,
+  "accepted": 161,
+  "skipped": 3,
+  "skip_reasons": {
+    "R_TOO_LARGE": 1,
+    "R_TOO_SMALL": 2
+  }
+}

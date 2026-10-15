@@ -1,0 +1,153 @@
+{
+  "tag": "val2025h2",
+  "split": "val2025h2",
+  "window": "w_0930_1130",
+  "friction_points": 1.0,
+  "controls_per_signal": 3,
+  "families": {
+    "DC_A": {
+      "n_signals_used": 15583,
+      "subsampled": false,
+      "signal": {
+        "win_rate": 0.48206378746069434,
+        "ci95": [
+          0.4742238122228553,
+          0.48991260364582234
+        ],
+        "expectancy_R": -0.21441126144805675
+      },
+      "C1_matched_random_control": {
+        "n": 46749,
+        "win_rate": 0.48030973924575926,
+        "ci95": [
+          0.47578262011720107,
+          0.48484009408464
+        ],
+        "expectancy_R": -0.21701867312422246,
+        "win_rate_diff_signal_minus_control": 0.0017540482149350778,
+        "win_rate_diff_ci95": [
+          -0.007379837001860958,
+          0.01093071509551008
+        ],
+        "win_rate_permutation_p": 0.35316170957260684,
+        "expectancy_R_diff": 0.0026074116761657107,
+        "expectancy_R_diff_ci95": [
+          -0.0162118769891607,
+          0.02053915763187895
+        ]
+      },
+      "C2_direction_control": {
+        "n": 15583,
+        "opposite_win_rate": 0.49746518642109994,
+        "opposite_ci95": [
+          0.4896164654378747,
+          0.5053151568405253
+        ],
+        "opposite_expectancy_R": -0.1835487542595557,
+        "win_rate_diff_signal_minus_opposite": -0.015401398960405599,
+        "win_rate_diff_ci95": [
+          -0.026378104344477953,
+          -0.004556247192453344
+        ]
+      },
+      "C3_no_edge_baseline_1R": 0.5,
+      "runtime_s": 9.4
+    },
+    "DC_B": {
+      "n_signals_used": 14603,
+      "subsampled": false,
+      "signal": {
+        "win_rate": 0.4826405533109635,
+        "ci95": [
+          0.47454151675189,
+          0.4907487206050825
+        ],
+        "expectancy_R": -0.2152449403514016
+      },
+      "C1_matched_random_control": {
+        "n": 43809,
+        "win_rate": 0.4988244424661599,
+        "ci95": [
+          0.4941427096629469,
+          0.5035063814123989
+        ],
+        "expectancy_R": -0.18040059020597848,
+        "win_rate_diff_signal_minus_control": -0.016183889155196418,
+        "win_rate_diff_ci95": [
+          -0.025839439384601315,
+          -0.006756602524595423
+        ],
+        "win_rate_permutation_p": 1.0,
+        "expectancy_R_diff": -0.034844350145423114,
+        "expectancy_R_diff_ci95": [
+          -0.05388138937215671,
+          -0.01591513530019809
+        ]
+      },
+      "C2_direction_control": {
+        "n": 14603,
+        "opposite_win_rate": 0.49510374580565636,
+        "opposite_ci95": [
+          0.4869969330481849,
+          0.5032131338986534
+        ],
+        "opposite_expectancy_R": -0.1875356985162515,
+        "win_rate_diff_signal_minus_opposite": -0.012463192494692854,
+        "win_rate_diff_ci95": [
+          -0.023967677874409343,
+          -0.0006145997397795318
+        ]
+      },
+      "C3_no_edge_baseline_1R": 0.5,
+      "runtime_s": 9.3
+    },
+    "DC_C": {
+      "n_signals_used": 4182,
+      "subsampled": false,
+      "signal": {
+        "win_rate": 0.46987087517934,
+        "ci95": [
+          0.4547790221498944,
+          0.4850180288184437
+        ],
+        "expectancy_R": -0.24476126344943464
+      },
+      "C1_matched_random_control": {
+        "n": 12546,
+        "win_rate": 0.4695520484616611,
+        "ci95": [
+          0.46082979571507954,
+          0.4782929412129619
+        ],
+        "expectancy_R": -0.24424183421557788,
+        "win_rate_diff_signal_minus_control": 0.0003188267176789106,
+        "win_rate_diff_ci95": [
+          -0.017300334768053576,
+          0.01737605611350229
+        ],
+        "win_rate_permutation_p": 0.4943764058985254,
+        "expectancy_R_diff": -0.0005194292338567552,
+        "expectancy_R_diff_ci95": [
+          -0.03458022486340769,
+          0.03538747411824136
+        ]
+      },
+      "C2_direction_control": {
+        "n": 4182,
+        "opposite_win_rate": 0.5062171209947394,
+        "opposite_ci95": [
+          0.4910655824161878,
+          0.5213572483363773
+        ],
+        "opposite_expectancy_R": -0.17238233540111267,
+        "win_rate_diff_signal_minus_opposite": -0.03634624581539936,
+        "win_rate_diff_ci95": [
+          -0.057155667144906774,
+          -0.014347202295552364
+        ]
+      },
+      "C3_no_edge_baseline_1R": 0.5,
+      "runtime_s": 5.6
+    }
+  }
+}

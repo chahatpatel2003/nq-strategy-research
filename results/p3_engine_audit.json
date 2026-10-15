@@ -1,0 +1,51 @@
+{
+  "note": "PHASE 3A ENGINE AUDIT - event geometry only. No win rate, expectancy or P&L of any kind was computed before the freeze.",
+  "split": "dev 2021-2023",
+  "trading_days": 762,
+  "n_events": 643758,
+  "events_per_day_total": 844.8,
+  "events_per_day_rth": 670.7,
+  "events_per_day_primary_window": 234.5,
+  "theta_points": {
+    "p25": 2.83,
+    "median": 4.06,
+    "p75": 5.88
+  },
+  "theta_points_primary_window": {
+    "p25": 3.94,
+    "median": 5.6,
+    "p75": 7.71
+  },
+  "implied_breakeven_wr_at_1pt_friction_primary": 0.5893,
+  "direction_balance": {
+    "1": 321863,
+    "-1": 321895
+  },
+  "prev_overshoot_ratio": {
+    "median": 0.676,
+    "p75": 1.405,
+    "p90": 2.356,
+    "frac_ge_gamma_2.0": 0.1414
+  },
+  "dc_magnitude_over_theta": {
+    "median": 1.032
+  },
+  "event_seconds": {
+    "median": 22.8,
+    "p90": 76.5
+  },
+  "causality_check": {
+    "all_conf_idx_gt_ext_idx": true,
+    "all_conf_ts_ge_ext_ts": true,
+    "events_with_conf_ts_equal_ext_ts": 134,
+    "events_with_conf_ts_equal_ext_ts_fraction": 0.000208,
+    "explanation_of_equal_timestamps": "0.02% of events confirm within the SAME nanosecond as their extreme: one aggressive sweep produced several prints sharing a ts_event and crossed theta inside it. Ordering is by (ts_event, source row number), so conf_idx > ext_idx still holds strictly - the confirming print genuinely follows the extreme in exchange sequence order. No future information is used, and the 250 ms entry latency is applied from the confirmation timestamp regardless.",
+    "all_dc_magnitude_ge_theta": true,
+    "ext_to_conf_seconds": {
+      "p1": 0.003,
+      "median": 9.341,
+      "p99": 59.6
+    },
+    "last_overshoot_per_day_left_unfinished": true
+  }
+}

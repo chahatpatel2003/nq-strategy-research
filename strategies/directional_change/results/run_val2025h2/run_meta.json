@@ -1,0 +1,21 @@
+{
+  "split": "val2025h2",
+  "tag": "val2025h2",
+  "start": "2025-07-01",
+  "end": "2025-12-31",
+  "spec_version": "dcevent-1.0.0",
+  "theta_vu": 0.5,
+  "is_contaminated_diagnostic": false,
+  "is_fresh_validation": true,
+  "trading_days": 128,
+  "runtime_s": 12.4,
+  "DC_A_signals": 110253,
+  "DC_A_accepted": 44793,
+  "DC_A_skipped": 65460,
+  "DC_B_signals": 64800,
+  "DC_B_accepted": 41596,
+  "DC_B_skipped": 23204,
+  "DC_C_signals": 15298,
+  "DC_C_accepted": 12052,
+  "DC_C_skipped": 3246
+}

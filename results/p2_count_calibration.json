@@ -1,0 +1,98 @@
+{
+  "note": "PRE-FREEZE COUNT CALIBRATION. Signal COUNTS only - no win rate, expectancy, P&L or outcome of any kind was computed for any of these trials.",
+  "conclusion": "Signal frequency is insensitive to the impulse threshold across the brief's entire suggested region (60-65 signals in 2021). The binding constraints are Stage B (three strictly increasing confirmed peaks) and Stage C (double deterioration), both mandated by the hypothesis and therefore NOT relaxed. The originally reasoned configuration was kept UNCHANGED. theta=0.50 was probed and rejected: it produced FEWER signals and began breaching the 600s extension budget (329 vs 2 EXTENSION_TOO_SLOW), confirming the original theta=0.25 reasoning.",
+  "implication": "~26 signals/year in the 09:30-11:30 primary window means the pre-registered 100-trade PASS gate cannot be met in a single validation year. This is disclosed BEFORE validation is run; the gate is NOT changed.",
+  "trials": [
+    {
+      "tag": "smoke",
+      "description": "BASELINE as specified: impulse 1.00xVU/90s, theta 0.25xVU",
+      "year": "2021 only",
+      "signals_total": 61,
+      "signals_0930_1130": 25,
+      "signals_0930_1600": 57,
+      "rejected_candidates": 61320,
+      "top_reject": [
+        "NOT_A_NEW_EXTREME",
+        43445
+      ]
+    },
+    {
+      "tag": "cnt_0.50",
+      "description": "theta 0.50xVU (scale probe)",
+      "year": "2021 only",
+      "signals_total": 39,
+      "signals_0930_1130": 17,
+      "signals_0930_1600": 39,
+      "rejected_candidates": 42734,
+      "top_reject": [
+        "NOT_A_NEW_EXTREME",
+        29960
+      ]
+    },
+    {
+      "tag": "i075_120",
+      "description": "impulse 0.75xVU/120s (permissive corner of the brief's region)",
+      "year": "2021 only",
+      "signals_total": 65,
+      "signals_0930_1130": 26,
+      "signals_0930_1600": 61,
+      "rejected_candidates": 75675,
+      "top_reject": [
+        "NOT_A_NEW_EXTREME",
+        53690
+      ]
+    },
+    {
+      "tag": "i075_090",
+      "description": "impulse 0.75xVU/90s",
+      "year": "2021 only",
+      "signals_total": 65,
+      "signals_0930_1130": 25,
+      "signals_0930_1600": 61,
+      "rejected_candidates": 72654,
+      "top_reject": [
+        "NOT_A_NEW_EXTREME",
+        51592
+      ]
+    },
+    {
+      "tag": "i100_120",
+      "description": "impulse 1.00xVU/120s",
+      "year": "2021 only",
+      "signals_total": 60,
+      "signals_0930_1130": 26,
+      "signals_0930_1600": 56,
+      "rejected_candidates": 65268,
+      "top_reject": [
+        "NOT_A_NEW_EXTREME",
+        46246
+      ]
+    },
+    {
+      "tag": "cnt2",
+      "description": "FINAL spec: absorption reference distribution session-matched to RTH, window 2000/min 500",
+      "year": "2021 only",
+      "signals_total": 50,
+      "signals_0930_1130": 20,
+      "signals_0930_1600": 50,
+      "rejected_candidates": 61348,
+      "top_reject": [
+        "NOT_A_NEW_EXTREME",
+        43457
+      ]
+    }
+  ],
+  "defect_found_and_corrected_pre_freeze": {
+    "defect": "The absorption reference distribution was contaminated by pre-open legs. A 500-leg window spans only ~3 hours, so at 09:35 the reference was dominated by 08:00-09:30 legs, which carry far less volume per tick than RTH legs. Almost every RTH leg therefore ranked near the top and the 70th-percentile gate stopped discriminating (20 rejections out of 61,320).",
+    "evidence": "COUNT diagnostic only - reject-reason tallies. No win rate, expectancy or P&L was computed.",
+    "correction": "Reference distribution restricted to RTH legs (session-matched); window lengthened to 2000 legs (~2 RTH days) with a 500-observation warm-up. The absorption FORMULA was not changed.",
+    "residual_finding": "Even after the correction the absorption gate rejects only 26 of 61,348 candidates. This is structural, not a bug: Stage C's efficiency-deterioration test (progress per aggressive contract falling) and Stage D's absorption proxy (aggressive volume per tick of best-price advance) are near-reciprocal measures, so Stage D is largely implied by Stage C. This is REPORTED, not engineered away - the pre-registered ablation (variant B vs C) is exactly the instrument for it."
+  },
+  "final_expected_sample": {
+    "per_year_0930_1130": 20,
+    "per_year_0930_1600": 50,
+    "dev_3y_0930_1130_estimate": 60,
+    "dev_3y_0930_1600_estimate": 150,
+    "note": "The pre-registered 100-trade PASS gate is unreachable in a single validation year. Disclosed before validation; the gate is NOT changed."
+  }
+}

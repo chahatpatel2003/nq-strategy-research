@@ -1,0 +1,112 @@
+# =====================================================================
+# Fast-Slow Nasdaq-100 — BASELINE CONFIGURATION
+# Every value here was chosen BEFORE any strategy P&L was computed.
+# Rationale for each choice lives in FAST_SLOW_SPEC.md.
+# =====================================================================
+spec_version: "fastslow-1.0.0"
+instrument:
+  symbol_root: "NQ"
+  tick_size: 0.25
+  point_value_usd: 20.0
+
+data:
+  timestamp_field: "ts_event"        # exchange matching-engine time
+  bar_minutes: 2
+  bar_alignment: "epoch_utc"         # bars start at multiples of 2 min from the UTC epoch
+
+sessions:                            # America/New_York wall clock
+  timezone: "America/New_York"
+  asia:  ["18:00", "03:00"]
+  eu:    ["03:00", "09:30"]
+  us:    ["09:30", "16:00"]
+  post:  ["16:00", "17:00"]
+  day_start: "18:00"                 # Globex trading day D = 18:00 ET (D-1) -> 17:00 ET (D)
+  day_end:   "17:00"
+
+contracts:
+  outright_regex: "^NQ[FGHJKMNQUVXZ][0-9]{1,2}$"
+  exclude_spreads: true              # any symbol containing '-'
+  front_rule: "max_volume_prev_trading_day"
+  exclude_roll_day: true             # no signals on a day where front contract changed
+  back_adjust: false                 # levels must be real tradeable prices
+
+levels:
+  families: ["PDH", "PDL", "US_H", "US_L", "EU_H", "EU_L", "ASIA_H", "ASIA_L"]
+  # priority for dedup + tie-breaks (earlier = higher priority)
+  priority: ["PDH", "PDL", "US_H", "US_L", "EU_H", "EU_L", "ASIA_H", "ASIA_L"]
+  source: "most_recent_completed_session_of_that_type"
+  min_session_bars: 30               # a session must have >=30 2-min bars to define a level
+  # touch tolerance, in NQ points
+  tolerance_atr_frac: 0.02           # 0.02 * ATR20(daily, previous completed day)
+  tolerance_min_points: 1.0
+  tolerance_max_points: 20.0
+  dedup_tolerance_mult: 1.0          # levels within 1.0 * tolerance are merged (highest priority wins)
+
+pattern:
+  # A = last bar touching the level before departure
+  # B = extreme of the excursion between A and the first return
+  # C = first bar after B that touches the level again
+  min_ab_points_atr_frac: 0.10       # MIN_AB = max(0.10*ATR20_daily_prev, min_ab_points_floor)
+  min_ab_points_floor: 10.0
+  min_ab_bars: 2
+  max_ab_bars: 60                    # 2 hours
+  max_bc_bars: 240                   # 8 hours
+  time_ratio_min: 2.0                # duration(B->C) >= 2.0 * duration(A->B)   [CANONICAL]
+  time_ratio_report_buckets: [2.0, 2.5, 3.0]
+  bc_ab_distance_ratio_min: 0.90     # |C-B| / |B-A|
+  bc_ab_distance_ratio_max: 1.25     # rejects blow-throughs of the level
+  same_trading_day_only: true
+
+trigger:
+  window_bars: 3                     # trigger pattern's LAST bar within [C, C+2]
+  families: ["ENGULFING", "PIN", "STAR"]
+  precedence: ["ENGULFING", "PIN", "STAR"]
+  atr2m_lookback: 20                 # 20-bar ATR of 2-min bars, computed causally
+  engulfing:
+    min_prev_body_atr_frac: 0.10
+    min_cur_body_atr_frac: 0.30
+  pin:
+    min_range_atr_frac: 0.50
+    max_body_frac_of_range: 0.35
+    min_dom_wick_frac_of_range: 0.55
+    min_dom_wick_over_body: 2.0
+    max_opp_wick_frac_of_range: 0.20
+    min_close_location: 0.60
+  star:
+    min_range1_atr_frac: 0.50
+    min_body1_frac_of_range1: 0.35
+    max_body2_over_body1: 0.40
+    min_body3_frac_of_range3: 0.35
+    # bar3 must close beyond the midpoint of bar1's real body
+
+entry:
+  mode: "first_trade_after_confirmation"
+  latency_ms: 250                    # order round-trip allowance after the trigger bar closes
+  max_wait_ms: 60000                 # abandon if no print within 60s (never expected on NQ)
+
+stop:
+  mode: "ticks_beyond_trigger_pattern_extreme"
+  ticks: 4                           # 4 ticks = 1.00 NQ point
+  min_r_points: 2.0                  # reject absurdly tight stops
+  max_r_atr_frac: 0.25               # reject absurdly wide stops (0.25 * ATR20_daily_prev)
+
+targets:
+  primary_r: 1.0
+  secondary_r: 2.0
+  tp_fill_rule: "trade_through_by_one_tick"   # limit fills require price to trade THROUGH the target
+  sl_fill_rule: "touch_then_market"           # stop-market triggers on touch, filled at the trigger print
+  resolution: "raw_trade_sequence"            # NEVER OHLC inference
+  timeout_exit_et: "16:59"                    # flat before the 17:00 ET halt
+
+portfolio:
+  max_concurrent_trades: 1
+  on_conflict: "record_as_skipped"
+
+costs:
+  round_trip_points_grid: [0.0, 0.5, 1.0, 2.0]
+
+reporting:
+  rth_focus_window_et: ["09:30", "11:30"]
+  splits:
+    dev: ["2021-01-01", "2023-12-31"]
+    val: ["2024-01-01", "2024-12-31"]

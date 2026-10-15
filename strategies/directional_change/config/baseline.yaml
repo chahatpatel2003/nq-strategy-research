@@ -1,0 +1,90 @@
+# =====================================================================
+# PHASE 3 — NQ DIRECTIONAL-CHANGE / EVENT-TIME STRATEGY
+# Candidate #3.  Every value fixed from a-priori reasoning BEFORE any P&L.
+# Rationale: DIRECTIONAL_CHANGE_SPEC.md
+# =====================================================================
+spec_version: "dcevent-1.0.0"
+
+instrument:
+  symbol_root: "NQ"
+  tick_size: 0.25
+  point_value_usd: 20.0
+
+data:
+  source: "trades_only"              # MBP-1 is deliberately NOT used in Phase 3
+  timestamp_field: "ts_event"
+  band_start_et: "08:00"             # cached band
+  band_end_et: "16:15"
+  engine_start_et: "08:00"           # DC state machine begins (warm-up, no signals)
+  signal_start_et: "09:30"           # earliest permitted ENTRY
+  signal_end_et: "16:00"             # latest permitted ENTRY
+  compress_price_path: true          # DC logic is exact on distinct consecutive prices
+
+volatility:
+  vu_definition: "atr14_completed_1min"   # reuses the frozen Phase-2 causal ATR
+  atr_minutes: 14
+  vu_floor_points: 2.0
+
+event:
+  theta_vu: 0.50                     # theta = 0.50 x VU        [CANONICAL]
+  theta_floor_points: 1.00           # 4 ticks - a safety rail, never binding in RTH
+  theta_sampling: "at_run_start"     # sampled at the previous confirmation, held
+  reset: "per_trading_day"
+
+strategies:
+  families: ["DC_A", "DC_B", "DC_C"]
+  dc_a: {}                           # enter at the confirmation, in the DC direction
+  dc_b:
+    beta_extension: 0.50             # join once price extends 0.50 x theta past conf
+  dc_c:
+    gamma_overshoot: 2.00            # previous overshoot >= 2.00 x theta
+
+risk:
+  r_rule: "R_equals_theta"
+  min_r_points: 1.00
+  max_r_points: 50.0                 # absurdity rail only
+
+entry:
+  mode: "first_trade_after_confirmation"
+  latency_ms: 250                    # identical to Phases 1 and 2
+  max_wait_ms: 60000
+
+targets:
+  primary_r: 1.0
+  diagnostic_r: [0.75, 1.25, 1.5, 2.0]
+  tp_fill_rule: "trade_through_by_one_tick"
+  sl_fill_rule: "touch_then_market"
+  resolution: "raw_trade_sequence"
+  max_hold_seconds: 1800
+  hard_exit_et: "16:00"
+
+portfolio:
+  max_concurrent_trades: 1           # per family; families are separate books
+  on_conflict: "SKIPPED_OVERLAP"
+
+costs:
+  round_trip_points_grid: [0.0, 0.5, 1.0, 2.0]
+  primary_friction_points: 1.0
+
+reporting:
+  primary_window_et: ["09:30", "11:30"]
+  diagnostic_windows_et:
+    - ["09:30", "10:30"]
+    - ["10:30", "11:30"]
+    - ["09:30", "12:00"]
+    - ["09:30", "16:00"]
+
+sensitivity:                         # DIAGNOSTIC ONLY, run after the baseline
+  theta_vu_grid: [0.25, 0.50, 0.75, 1.00]
+
+verdict:
+  split: "val2025h2"
+  window: "09:30-11:30"
+  target: "1R"
+  friction_points: 1.0
+  min_trades: 100
+  min_win_rate: 0.50
+  ci_lower_gt: 0.50
+  min_expectancy_r: 0.0
+  min_profit_factor: 1.10
+  binomial_p_lt: 0.05

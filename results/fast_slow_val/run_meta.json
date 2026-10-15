@@ -1,0 +1,23 @@
+{
+  "split": "val",
+  "start": "2024-01-01",
+  "end": "2024-12-31",
+  "spec_version": "fastslow-1.0.0",
+  "abc_candidates": 176,
+  "days_considered": 259,
+  "days_skipped": {
+    "ROLL_DAY": 4,
+    "NO_LEVELS": 0,
+    "NO_ATR": 0,
+    "TOO_FEW_BARS": 0
+  },
+  "runtime_s": 2.0,
+  "signals_ENGULFING": 61,
+  "accepted_ENGULFING": 60,
+  "signals_PIN": 111,
+  "accepted_PIN": 105,
+  "signals_STAR": 4,
+  "accepted_STAR": 4,
+  "signals_ANY": 166,
+  "accepted_ANY": 159
+}

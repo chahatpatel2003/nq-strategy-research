@@ -1,0 +1,61 @@
+{
+  "split": "contam2024",
+  "start": "2024-01-01",
+  "end": "2024-12-31",
+  "role": "DEVELOPMENT (contaminated)",
+  "context_model": "r4p0:A_logit:top2",
+  "tau": 0.1799381018935508,
+  "r_tag": "r4p0",
+  "seed": 20260821,
+  "n_days": 255,
+  "n_contexts": 89,
+  "n_rows": 30600,
+  "runtime_s": 1.9,
+  "books": {
+    "E1": {
+      "rows": 89,
+      "accepted": 66,
+      "fill_rate": 0.7415730337078652
+    },
+    "E2": {
+      "rows": 89,
+      "accepted": 59,
+      "fill_rate": 0.6629213483146067
+    },
+    "E3": {
+      "rows": 89,
+      "accepted": 58,
+      "fill_rate": 0.651685393258427
+    },
+    "E4": {
+      "rows": 89,
+      "accepted": 38,
+      "fill_rate": 0.42696629213483145
+    },
+    "E5": {
+      "rows": 89,
+      "accepted": 56,
+      "fill_rate": 0.6292134831460674
+    },
+    "E6": {
+      "rows": 89,
+      "accepted": 36,
+      "fill_rate": 0.4044943820224719
+    },
+    "CONTROL_IMMEDIATE": {
+      "rows": 89,
+      "accepted": 74,
+      "fill_rate": 0.8314606741573034
+    },
+    "CONTROL_RANDOM": {
+      "rows": 790,
+      "accepted": 790,
+      "fill_rate": 8.876404494382022
+    },
+    "CONTROL_NONCONTEXT": {
+      "rows": 850,
+      "accepted": 850,
+      "fill_rate": 9.55056179775281
+    }
+  }
+}

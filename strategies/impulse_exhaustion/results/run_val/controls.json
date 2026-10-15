@@ -1,0 +1,49 @@
+{
+  "tag": "val",
+  "window": "w_0930_1130",
+  "friction_points": 1.0,
+  "signal": {
+    "n": 15,
+    "win_rate": 0.26666666666666666,
+    "win_rate_ci95": [
+      0.10897453325692374,
+      0.5195043405598057
+    ],
+    "expectancy_R": -0.6675131197188277
+  },
+  "control": {
+    "n": 75,
+    "per_signal": 5,
+    "win_rate": 0.56,
+    "win_rate_ci95": [
+      0.44746771381455497,
+      0.6666854250875085
+    ],
+    "expectancy_R": -0.08416780271324774
+  },
+  "difference": {
+    "win_rate_diff": -0.2933333333333334,
+    "win_rate_diff_ci95": [
+      -0.5333333333333333,
+      -0.0396666666666715
+    ],
+    "win_rate_permutation_p": 0.9914017196560688,
+    "expectancy_R_diff": -0.5833453170055799,
+    "expectancy_R_diff_ci95": [
+      -1.044951361920563,
+      -0.06877977773644489
+    ],
+    "expectancy_R_permutation_p": 0.9802039592081584
+  },
+  "label_shuffle_null": {
+    "n_replications": 2000,
+    "long_fraction_preserved": 0.4666666666666667,
+    "null_win_rate_mean": 0.49833333333333335,
+    "null_win_rate_p05": 0.26666666666666666,
+    "null_win_rate_p95": 0.7333333333333333,
+    "real_win_rate_percentile_in_null": 0.0225,
+    "null_expectancy_mean": -0.005233426834969621,
+    "null_expectancy_p95": 0.463768115942029,
+    "real_expectancy_percentile_in_null": 0.0045
+  }
+}

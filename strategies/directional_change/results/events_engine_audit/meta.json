@@ -1,0 +1,15 @@
+{
+  "split": "dev",
+  "start": "2021-01-01",
+  "end": "2023-12-31",
+  "spec_version": "dcevent-1.0.0",
+  "theta_vu": 0.5,
+  "trading_days": 762,
+  "n_events": 643758,
+  "events_per_day": 844.8267716535433,
+  "events_per_day_rth": 670.7165354330708,
+  "events_per_day_primary": 234.5301837270341,
+  "median_theta_points": 4.0625,
+  "median_vu_points": 8.125,
+  "runtime_s": 41.5
+}

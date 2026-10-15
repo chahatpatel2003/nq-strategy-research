@@ -1,0 +1,54 @@
+{
+  "frozen_id": "impexh-1.0.0.impl2+48c76a0e68b88947",
+  "split": "validation 2024",
+  "hypothesis": "window=09:30-11:30 target=1R friction=1.0 pt round trip",
+  "metrics": {
+    "n_trades": 15,
+    "wins": 4,
+    "losses": 11,
+    "win_rate": 0.26666666666666666,
+    "win_rate_ci95_lo": 0.10897453325692374,
+    "win_rate_ci95_hi": 0.5195043405598057,
+    "p_value_gt_breakeven": 0.982421875,
+    "expectancy_R": -0.6675131197188277,
+    "median_R": -1.1290322580645162,
+    "expectancy_points": -3.9166666666666665,
+    "profit_factor": 0.2878787878787879,
+    "total_points": -58.75,
+    "max_drawdown_R": 10.012696795782414,
+    "max_drawdown_R_daily": 10.012696795782414,
+    "longest_loss_streak": 5,
+    "t_stat_R": -2.880157905289842,
+    "trades_per_day_mean": 0.058823529411764705,
+    "pct_profitable_days": 0.26666666666666666,
+    "worst_day_R": -1.3333333333333333,
+    "daily_R_p05": -1.3
+  },
+  "gate_checks": {
+    "trades >= 100": {
+      "pass": false,
+      "value": 15
+    },
+    "net expectancy > 0 R": {
+      "pass": false,
+      "value": -0.6675
+    },
+    "profit factor > 1.1": {
+      "pass": false,
+      "value": 0.2879
+    },
+    "win rate > 0.5": {
+      "pass": false,
+      "value": 0.2667
+    },
+    "95% CI lower bound > 0.5": {
+      "pass": false,
+      "value": 0.109
+    },
+    "binomial p < 0.05": {
+      "pass": false,
+      "value": 0.9824
+    }
+  },
+  "verdict": "FAIL"
+}

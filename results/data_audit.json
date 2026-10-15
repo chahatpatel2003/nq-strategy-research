@@ -1,0 +1,845 @@
+{
+  "trades_dir": "/Volumes/T9/nq data/raw/trades",
+  "mbp1_dir": "/Volumes/T9/nq data/raw/mbp1",
+  "all_trade_halves": {
+    "2021_H1": "/Volumes/T9/nq data/raw/trades/2021_H1.parquet",
+    "2021_H2": "/Volumes/T9/nq data/raw/trades/2021_H2.parquet",
+    "2022_H1": "/Volumes/T9/nq data/raw/trades/2022_H1.parquet",
+    "2022_H2": "/Volumes/T9/nq data/raw/trades/2022_H2.parquet",
+    "2023_H1": "/Volumes/T9/nq data/raw/trades/2023_H1.parquet",
+    "2023_H2": "/Volumes/T9/nq data/raw/trades/2023_H2.parquet",
+    "2024_H1": "/Volumes/T9/nq data/raw/trades/2024_H1.parquet",
+    "2024_H2": "/Volumes/T9/nq data/raw/trades/2024_H2.parquet",
+    "2025_H1": "/Volumes/T9/nq data/raw/trades/2025_H1.parquet",
+    "2025_H2": "/Volumes/T9/nq data/raw/trades/2025_H2.parquet",
+    "2026_H1": "/Volumes/T9/nq data/raw/trades/2026_H1.parquet"
+  },
+  "all_mbp1_halves": {
+    "2021_H1": "/Volumes/T9/nq data/raw/mbp1/2021_H1.parquet",
+    "2021_H2": "/Volumes/T9/nq data/raw/mbp1/2021_H2.parquet",
+    "2022_H1": "/Volumes/T9/nq data/raw/mbp1/2022_H1.parquet",
+    "2022_H2": "/Volumes/T9/nq data/raw/mbp1/2022_H2.parquet",
+    "2023_H1": "/Volumes/T9/nq data/raw/mbp1/2023_H1.parquet",
+    "2023_H2": "/Volumes/T9/nq data/raw/mbp1/2023_H2.parquet",
+    "2024_H1": "/Volumes/T9/nq data/raw/mbp1/2024_H1.parquet",
+    "2024_H2": "/Volumes/T9/nq data/raw/mbp1/2024_H2.parquet",
+    "2025_H1": "/Volumes/T9/nq data/raw/mbp1/2025_H1.parquet"
+  },
+  "audited_halves": [
+    "2021_H1",
+    "2021_H2",
+    "2022_H1",
+    "2022_H2",
+    "2023_H1",
+    "2023_H2",
+    "2024_H1",
+    "2024_H2"
+  ],
+  "schemas": [
+    {
+      "file": "2021_H1.parquet",
+      "path": "/Volumes/T9/nq data/raw/trades/2021_H1.parquet",
+      "size_bytes": 1106822528,
+      "num_rows": 43112586,
+      "num_row_groups": 658,
+      "created_by": "parquet-cpp-arrow version 24.0.0",
+      "columns": [
+        {
+          "name": "ts_event",
+          "type": "timestamp[ns, tz=UTC]"
+        },
+        {
+          "name": "rtype",
+          "type": "uint8"
+        },
+        {
+          "name": "publisher_id",
+          "type": "uint16"
+        },
+        {
+          "name": "instrument_id",
+          "type": "uint32"
+        },
+        {
+          "name": "action",
+          "type": "large_string"
+        },
+        {
+          "name": "side",
+          "type": "large_string"
+        },
+        {
+          "name": "depth",
+          "type": "uint8"
+        },
+        {
+          "name": "price",
+          "type": "double"
+        },
+        {
+          "name": "size",
+          "type": "uint32"
+        },
+        {
+          "name": "flags",
+          "type": "uint8"
+        },
+        {
+          "name": "ts_in_delta",
+          "type": "int32"
+        },
+        {
+          "name": "sequence",
+          "type": "uint32"
+        },
+        {
+          "name": "symbol",
+          "type": "large_string"
+        },
+        {
+          "name": "ts_recv",
+          "type": "timestamp[ns, tz=UTC]"
+        }
+      ]
+    },
+    {
+      "file": "2021_H2.parquet",
+      "path": "/Volumes/T9/nq data/raw/trades/2021_H2.parquet",
+      "size_bytes": 1095809070,
+      "num_rows": 42552097,
+      "num_row_groups": 650,
+      "created_by": "parquet-cpp-arrow version 24.0.0",
+      "columns": [
+        {
+          "name": "ts_event",
+          "type": "timestamp[ns, tz=UTC]"
+        },
+        {
+          "name": "rtype",
+          "type": "uint8"
+        },
+        {
+          "name": "publisher_id",
+          "type": "uint16"
+        },
+        {
+          "name": "instrument_id",
+          "type": "uint32"
+        },
+        {
+          "name": "action",
+          "type": "large_string"
+        },
+        {
+          "name": "side",
+          "type": "large_string"
+        },
+        {
+          "name": "depth",
+          "type": "uint8"
+        },
+        {
+          "name": "price",
+          "type": "double"
+        },
+        {
+          "name": "size",
+          "type": "uint32"
+        },
+        {
+          "name": "flags",
+          "type": "uint8"
+        },
+        {
+          "name": "ts_in_delta",
+          "type": "int32"
+        },
+        {
+          "name": "sequence",
+          "type": "uint32"
+        },
+        {
+          "name": "symbol",
+          "type": "large_string"
+        },
+        {
+          "name": "ts_recv",
+          "type": "timestamp[ns, tz=UTC]"
+        }
+      ]
+    },
+    {
+      "file": "2022_H1.parquet",
+      "path": "/Volumes/T9/nq data/raw/trades/2022_H1.parquet",
+      "size_bytes": 1513326861,
+      "num_rows": 60018704,
+      "num_row_groups": 916,
+      "created_by": "parquet-cpp-arrow version 24.0.0",
+      "columns": [
+        {
+          "name": "ts_event",
+          "type": "timestamp[ns, tz=UTC]"
+        },
+        {
+          "name": "rtype",
+          "type": "uint8"
+        },
+        {
+          "name": "publisher_id",
+          "type": "uint16"
+        },
+        {
+          "name": "instrument_id",
+          "type": "uint32"
+        },
+        {
+          "name": "action",
+          "type": "large_string"
+        },
+        {
+          "name": "side",
+          "type": "large_string"
+        },
+        {
+          "name": "depth",
+          "type": "uint8"
+        },
+        {
+          "name": "price",
+          "type": "double"
+        },
+        {
+          "name": "size",
+          "type": "uint32"
+        },
+        {
+          "name": "flags",
+          "type": "uint8"
+        },
+        {
+          "name": "ts_in_delta",
+          "type": "int32"
+        },
+        {
+          "name": "sequence",
+          "type": "uint32"
+        },
+        {
+          "name": "symbol",
+          "type": "large_string"
+        },
+        {
+          "name": "ts_recv",
+          "type": "timestamp[ns, tz=UTC]"
+        }
+      ]
+    },
+    {
+      "file": "2022_H2.parquet",
+      "path": "/Volumes/T9/nq data/raw/trades/2022_H2.parquet",
+      "size_bytes": 1433552589,
+      "num_rows": 55802672,
+      "num_row_groups": 852,
+      "created_by": "parquet-cpp-arrow version 24.0.0",
+      "columns": [
+        {
+          "name": "ts_event",
+          "type": "timestamp[ns, tz=UTC]"
+        },
+        {
+          "name": "rtype",
+          "type": "uint8"
+        },
+        {
+          "name": "publisher_id",
+          "type": "uint16"
+        },
+        {
+          "name": "instrument_id",
+          "type": "uint32"
+        },
+        {
+          "name": "action",
+          "type": "large_string"
+        },
+        {
+          "name": "side",
+          "type": "large_string"
+        },
+        {
+          "name": "depth",
+          "type": "uint8"
+        },
+        {
+          "name": "price",
+          "type": "double"
+        },
+        {
+          "name": "size",
+          "type": "uint32"
+        },
+        {
+          "name": "flags",
+          "type": "uint8"
+        },
+        {
+          "name": "ts_in_delta",
+          "type": "int32"
+        },
+        {
+          "name": "sequence",
+          "type": "uint32"
+        },
+        {
+          "name": "symbol",
+          "type": "large_string"
+        },
+        {
+          "name": "ts_recv",
+          "type": "timestamp[ns, tz=UTC]"
+        }
+      ]
+    },
+    {
+      "file": "2023_H1.parquet",
+      "path": "/Volumes/T9/nq data/raw/trades/2023_H1.parquet",
+      "size_bytes": 1305762398,
+      "num_rows": 50285745,
+      "num_row_groups": 768,
+      "created_by": "parquet-cpp-arrow version 24.0.0",
+      "columns": [
+        {
+          "name": "ts_event",
+          "type": "timestamp[ns, tz=UTC]"
+        },
+        {
+          "name": "rtype",
+          "type": "uint8"
+        },
+        {
+          "name": "publisher_id",
+          "type": "uint16"
+        },
+        {
+          "name": "instrument_id",
+          "type": "uint32"
+        },
+        {
+          "name": "action",
+          "type": "large_string"
+        },
+        {
+          "name": "side",
+          "type": "large_string"
+        },
+        {
+          "name": "depth",
+          "type": "uint8"
+        },
+        {
+          "name": "price",
+          "type": "double"
+        },
+        {
+          "name": "size",
+          "type": "uint32"
+        },
+        {
+          "name": "flags",
+          "type": "uint8"
+        },
+        {
+          "name": "ts_in_delta",
+          "type": "int32"
+        },
+        {
+          "name": "sequence",
+          "type": "uint32"
+        },
+        {
+          "name": "symbol",
+          "type": "large_string"
+        },
+        {
+          "name": "ts_recv",
+          "type": "timestamp[ns, tz=UTC]"
+        }
+      ]
+    },
+    {
+      "file": "2023_H2.parquet",
+      "path": "/Volumes/T9/nq data/raw/trades/2023_H2.parquet",
+      "size_bytes": 1295214885,
+      "num_rows": 50488364,
+      "num_row_groups": 771,
+      "created_by": "parquet-cpp-arrow version 24.0.0",
+      "columns": [
+        {
+          "name": "ts_event",
+          "type": "timestamp[ns, tz=UTC]"
+        },
+        {
+          "name": "rtype",
+          "type": "uint8"
+        },
+        {
+          "name": "publisher_id",
+          "type": "uint16"
+        },
+        {
+          "name": "instrument_id",
+          "type": "uint32"
+        },
+        {
+          "name": "action",
+          "type": "large_string"
+        },
+        {
+          "name": "side",
+          "type": "large_string"
+        },
+        {
+          "name": "depth",
+          "type": "uint8"
+        },
+        {
+          "name": "price",
+          "type": "double"
+        },
+        {
+          "name": "size",
+          "type": "uint32"
+        },
+        {
+          "name": "flags",
+          "type": "uint8"
+        },
+        {
+          "name": "ts_in_delta",
+          "type": "int32"
+        },
+        {
+          "name": "sequence",
+          "type": "uint32"
+        },
+        {
+          "name": "symbol",
+          "type": "large_string"
+        },
+        {
+          "name": "ts_recv",
+          "type": "timestamp[ns, tz=UTC]"
+        }
+      ]
+    },
+    {
+      "file": "2024_H1.parquet",
+      "path": "/Volumes/T9/nq data/raw/trades/2024_H1.parquet",
+      "size_bytes": 1304195721,
+      "num_rows": 51075993,
+      "num_row_groups": 780,
+      "created_by": "parquet-cpp-arrow version 24.0.0",
+      "columns": [
+        {
+          "name": "ts_event",
+          "type": "timestamp[ns, tz=UTC]"
+        },
+        {
+          "name": "rtype",
+          "type": "uint8"
+        },
+        {
+          "name": "publisher_id",
+          "type": "uint16"
+        },
+        {
+          "name": "instrument_id",
+          "type": "uint32"
+        },
+        {
+          "name": "action",
+          "type": "large_string"
+        },
+        {
+          "name": "side",
+          "type": "large_string"
+        },
+        {
+          "name": "depth",
+          "type": "uint8"
+        },
+        {
+          "name": "price",
+          "type": "double"
+        },
+        {
+          "name": "size",
+          "type": "uint32"
+        },
+        {
+          "name": "flags",
+          "type": "uint8"
+        },
+        {
+          "name": "ts_in_delta",
+          "type": "int32"
+        },
+        {
+          "name": "sequence",
+          "type": "uint32"
+        },
+        {
+          "name": "symbol",
+          "type": "large_string"
+        },
+        {
+          "name": "ts_recv",
+          "type": "timestamp[ns, tz=UTC]"
+        }
+      ]
+    },
+    {
+      "file": "2024_H2.parquet",
+      "path": "/Volumes/T9/nq data/raw/trades/2024_H2.parquet",
+      "size_bytes": 1229612152,
+      "num_rows": 48648606,
+      "num_row_groups": 743,
+      "created_by": "parquet-cpp-arrow version 24.0.0",
+      "columns": [
+        {
+          "name": "ts_event",
+          "type": "timestamp[ns, tz=UTC]"
+        },
+        {
+          "name": "rtype",
+          "type": "uint8"
+        },
+        {
+          "name": "publisher_id",
+          "type": "uint16"
+        },
+        {
+          "name": "instrument_id",
+          "type": "uint32"
+        },
+        {
+          "name": "action",
+          "type": "large_string"
+        },
+        {
+          "name": "side",
+          "type": "large_string"
+        },
+        {
+          "name": "depth",
+          "type": "uint8"
+        },
+        {
+          "name": "price",
+          "type": "double"
+        },
+        {
+          "name": "size",
+          "type": "uint32"
+        },
+        {
+          "name": "flags",
+          "type": "uint8"
+        },
+        {
+          "name": "ts_in_delta",
+          "type": "int32"
+        },
+        {
+          "name": "sequence",
+          "type": "uint32"
+        },
+        {
+          "name": "symbol",
+          "type": "large_string"
+        },
+        {
+          "name": "ts_recv",
+          "type": "timestamp[ns, tz=UTC]"
+        }
+      ]
+    }
+  ],
+  "quality": [
+    {
+      "rows_scanned": 43112586,
+      "spread_rows": 188505.0,
+      "outright_volume": 66437294.0,
+      "off_tick_rows": 150551.0,
+      "null_rows": 0.0,
+      "nonpositive_size": 0.0,
+      "n_actions": 1,
+      "n_rtypes": 1,
+      "n_publishers": 1,
+      "n_flag_values": 1,
+      "flag_min": 0,
+      "flag_max": 0,
+      "ts_min": "2021-01-03 15:00:00-08:00",
+      "ts_max": "2021-06-30 16:59:55.920609-07:00",
+      "mean_latency_ms": 0.542680615145656,
+      "p50_latency_ms": 0.268,
+      "p99_latency_ms": 4.612,
+      "max_latency_ms": 296.632,
+      "file": "2021_H1.parquet",
+      "side_counts": {
+        "A": 21559490,
+        "B": 21552751,
+        "N": 345
+      }
+    },
+    {
+      "rows_scanned": 42552097,
+      "spread_rows": 190620.0,
+      "outright_volume": 69492127.0,
+      "off_tick_rows": 151116.0,
+      "null_rows": 0.0,
+      "nonpositive_size": 0.0,
+      "n_actions": 1,
+      "n_rtypes": 1,
+      "n_publishers": 1,
+      "n_flag_values": 1,
+      "flag_min": 0,
+      "flag_max": 0,
+      "ts_min": "2021-06-30 17:00:00.405502-07:00",
+      "ts_max": "2021-12-31 13:59:59.979212-08:00",
+      "mean_latency_ms": 0.4648221138901803,
+      "p50_latency_ms": 0.235,
+      "p99_latency_ms": 3.352,
+      "max_latency_ms": 404.642,
+      "file": "2021_H2.parquet",
+      "side_counts": {
+        "B": 21296048,
+        "A": 21255879,
+        "N": 170
+      }
+    },
+    {
+      "rows_scanned": 60018704,
+      "spread_rows": 249465.0,
+      "outright_volume": 87048456.0,
+      "off_tick_rows": 195393.0,
+      "null_rows": 0.0,
+      "nonpositive_size": 0.0,
+      "n_actions": 1,
+      "n_rtypes": 1,
+      "n_publishers": 1,
+      "n_flag_values": 2,
+      "flag_min": 0,
+      "flag_max": 4,
+      "ts_min": "2022-01-02 15:00:00-08:00",
+      "ts_max": "2022-06-30 16:59:59.735762-07:00",
+      "mean_latency_ms": 0.6068740878010295,
+      "p50_latency_ms": 0.251,
+      "p99_latency_ms": 5.418,
+      "max_latency_ms": 232.834,
+      "file": "2022_H1.parquet",
+      "side_counts": {
+        "A": 30054671,
+        "B": 29963844,
+        "N": 189
+      }
+    },
+    {
+      "rows_scanned": 55802672,
+      "spread_rows": 201167.0,
+      "outright_volume": 84604380.0,
+      "off_tick_rows": 157264.0,
+      "null_rows": 0.0,
+      "nonpositive_size": 0.0,
+      "n_actions": 1,
+      "n_rtypes": 1,
+      "n_publishers": 1,
+      "n_flag_values": 2,
+      "flag_min": 0,
+      "flag_max": 4,
+      "ts_min": "2022-06-30 17:00:00.153507-07:00",
+      "ts_max": "2022-12-30 13:59:59.582307-08:00",
+      "mean_latency_ms": 0.5966614756189453,
+      "p50_latency_ms": 0.241,
+      "p99_latency_ms": 5.525,
+      "max_latency_ms": 286.939,
+      "file": "2022_H2.parquet",
+      "side_counts": {
+        "A": 27935277,
+        "B": 27867174,
+        "N": 221
+      }
+    },
+    {
+      "rows_scanned": 50285745,
+      "spread_rows": 246292.0,
+      "outright_volume": 80476202.0,
+      "off_tick_rows": 193574.0,
+      "null_rows": 0.0,
+      "nonpositive_size": 0.0,
+      "n_actions": 1,
+      "n_rtypes": 1,
+      "n_publishers": 1,
+      "n_flag_values": 1,
+      "flag_min": 0,
+      "flag_max": 0,
+      "ts_min": "2023-01-02 15:00:00-08:00",
+      "ts_max": "2023-06-30 13:59:59.381688-07:00",
+      "mean_latency_ms": 0.8744953918849169,
+      "p50_latency_ms": 0.238,
+      "p99_latency_ms": 18.002,
+      "max_latency_ms": 285.886,
+      "file": "2023_H1.parquet",
+      "side_counts": {
+        "A": 25165264,
+        "B": 25120317,
+        "N": 164
+      }
+    },
+    {
+      "rows_scanned": 50488364,
+      "spread_rows": 205406.0,
+      "outright_volume": 80783308.0,
+      "off_tick_rows": 163388.0,
+      "null_rows": 0.0,
+      "nonpositive_size": 0.0,
+      "n_actions": 1,
+      "n_rtypes": 1,
+      "n_publishers": 1,
+      "n_flag_values": 1,
+      "flag_min": 0,
+      "flag_max": 0,
+      "ts_min": "2023-07-02 15:00:00-07:00",
+      "ts_max": "2023-12-29 13:59:58.064362-08:00",
+      "mean_latency_ms": 0.5509541104956382,
+      "p50_latency_ms": 0.239,
+      "p99_latency_ms": 4.721,
+      "max_latency_ms": 255.528,
+      "file": "2023_H2.parquet",
+      "side_counts": {
+        "B": 25253705,
+        "A": 25234485,
+        "N": 174
+      }
+    },
+    {
+      "rows_scanned": 51075993,
+      "spread_rows": 223069.0,
+      "outright_volume": 80430176.0,
+      "off_tick_rows": 172886.0,
+      "null_rows": 0.0,
+      "nonpositive_size": 0.0,
+      "n_actions": 1,
+      "n_rtypes": 1,
+      "n_publishers": 1,
+      "n_flag_values": 1,
+      "flag_min": 0,
+      "flag_max": 0,
+      "ts_min": "2024-01-01 15:00:00-08:00",
+      "ts_max": "2024-06-30 16:59:59.277888-07:00",
+      "mean_latency_ms": 0.576014048243761,
+      "p50_latency_ms": 0.246,
+      "p99_latency_ms": 4.888,
+      "max_latency_ms": 97.813,
+      "file": "2024_H1.parquet",
+      "side_counts": {
+        "A": 25571192,
+        "B": 25504633,
+        "N": 168
+      }
+    },
+    {
+      "rows_scanned": 48648606,
+      "spread_rows": 273132.0,
+      "outright_volume": 71608987.0,
+      "off_tick_rows": 212640.0,
+      "null_rows": 0.0,
+      "nonpositive_size": 0.0,
+      "n_actions": 1,
+      "n_rtypes": 1,
+      "n_publishers": 1,
+      "n_flag_values": 1,
+      "flag_min": 0,
+      "flag_max": 0,
+      "ts_min": "2024-06-30 17:00:00.031821-07:00",
+      "ts_max": "2024-12-31 13:59:59.000630-08:00",
+      "mean_latency_ms": 0.6265756002751651,
+      "p50_latency_ms": 0.262,
+      "p99_latency_ms": 5.768,
+      "max_latency_ms": 110.137,
+      "file": "2024_H2.parquet",
+      "side_counts": {
+        "A": 24338833,
+        "B": 24309579,
+        "N": 194
+      }
+    }
+  ],
+  "ordering": [
+    {
+      "file": "2021_H1.parquet",
+      "rows": 43112586,
+      "ts_recv_out_of_order": 0,
+      "ts_event_out_of_order": 4180,
+      "ts_event_after_ts_recv": 0,
+      "same_evt_seq_instrument_adjacent": 3254310
+    },
+    {
+      "file": "2021_H2.parquet",
+      "rows": 42552097,
+      "ts_recv_out_of_order": 0,
+      "ts_event_out_of_order": 15646,
+      "ts_event_after_ts_recv": 5,
+      "same_evt_seq_instrument_adjacent": 3059569
+    },
+    {
+      "file": "2022_H1.parquet",
+      "rows": 60018704,
+      "ts_recv_out_of_order": 0,
+      "ts_event_out_of_order": 27268,
+      "ts_event_after_ts_recv": 0,
+      "same_evt_seq_instrument_adjacent": 6135695
+    },
+    {
+      "file": "2022_H2.parquet",
+      "rows": 55802672,
+      "ts_recv_out_of_order": 0,
+      "ts_event_out_of_order": 18132,
+      "ts_event_after_ts_recv": 0,
+      "same_evt_seq_instrument_adjacent": 4206497
+    },
+    {
+      "file": "2023_H1.parquet",
+      "rows": 50285745,
+      "ts_recv_out_of_order": 0,
+      "ts_event_out_of_order": 19729,
+      "ts_event_after_ts_recv": 414156,
+      "same_evt_seq_instrument_adjacent": 3437461
+    },
+    {
+      "file": "2023_H2.parquet",
+      "rows": 50488364,
+      "ts_recv_out_of_order": 0,
+      "ts_event_out_of_order": 9846,
+      "ts_event_after_ts_recv": 1932,
+      "same_evt_seq_instrument_adjacent": 3294439
+    },
+    {
+      "file": "2024_H1.parquet",
+      "rows": 51075993,
+      "ts_recv_out_of_order": 0,
+      "ts_event_out_of_order": 8723,
+      "ts_event_after_ts_recv": 64,
+      "same_evt_seq_instrument_adjacent": 3632640
+    },
+    {
+      "file": "2024_H2.parquet",
+      "rows": 48648606,
+      "ts_recv_out_of_order": 0,
+      "ts_event_out_of_order": 6992,
+      "ts_event_after_ts_recv": 17,
+      "same_evt_seq_instrument_adjacent": 4461544
+    }
+  ],
+  "daily_symbol_volume_rows": 3076
+}

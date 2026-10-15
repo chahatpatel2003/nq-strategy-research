@@ -1,0 +1,50 @@
+{
+  "split": "contam2025h2",
+  "start": "2025-07-01",
+  "end": "2025-12-31",
+  "spec_version": "largerr-1.0.0",
+  "r_mults": {
+    "r2p0": 2.0,
+    "r3p0": 3.0,
+    "r4p0": 4.0
+  },
+  "decision_step_s": 60,
+  "max_hold_s": 3600,
+  "trading_days": 128,
+  "rows": 15360,
+  "months": [
+    {
+      "ym": "2025-07",
+      "days": 22,
+      "rows": 2640
+    },
+    {
+      "ym": "2025-08",
+      "days": 21,
+      "rows": 2520
+    },
+    {
+      "ym": "2025-09",
+      "days": 21,
+      "rows": 2520
+    },
+    {
+      "ym": "2025-10",
+      "days": 23,
+      "rows": 2760
+    },
+    {
+      "ym": "2025-11",
+      "days": 20,
+      "rows": 2400
+    },
+    {
+      "ym": "2025-12",
+      "days": 21,
+      "rows": 2520
+    }
+  ],
+  "runtime_s": 3.7,
+  "is_contaminated": true,
+  "is_fresh_validation": false
+}

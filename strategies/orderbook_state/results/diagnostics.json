@@ -1,0 +1,185 @@
+{
+  "reference_config": "R25:A_logit:top1p0",
+  "note": "NO CANDIDATE WAS SELECTED - diagnostics only",
+  "ablation": [
+    {
+      "arm": "A0_full",
+      "n_features": 40,
+      "train_acc": 0.5203639657444006,
+      "tau": 0.06977321342123871,
+      "n_trades": 2229,
+      "win_rate": 0.4988784208165096,
+      "gross_ER": 0.0010901749663526277,
+      "net_ER": -0.038909825033647406,
+      "pf_r": 0.9235475084403623,
+      "control_ER": -0.035682368775235555,
+      "advantage_R": -0.003227456258411851
+    },
+    {
+      "arm": "A1_quote_only",
+      "n_features": 32,
+      "train_acc": 0.5200400746596399,
+      "tau": 0.06743598958406093,
+      "n_trades": 2319,
+      "win_rate": 0.4894351013367831,
+      "gross_ER": -0.021056489866321682,
+      "net_ER": -0.061056489866321714,
+      "pf_r": 0.8825573775930855,
+      "control_ER": -0.026436394997843924,
+      "advantage_R": -0.034620094868477794
+    },
+    {
+      "arm": "A2_trades_context",
+      "n_features": 8,
+      "train_acc": 0.5110699385155907,
+      "tau": 0.04283554097124727,
+      "n_trades": 563,
+      "win_rate": 0.4564831261101243,
+      "gross_ER": -0.0772646536412078,
+      "net_ER": -0.11726465364120783,
+      "pf_r": 0.7888981262390485,
+      "control_ER": -0.050790408525754914,
+      "advantage_R": -0.06647424511545291
+    }
+  ],
+  "incremental_mbp": {
+    "expectancy_R": {
+      "stat": "expectancy_R",
+      "n_a": 2229,
+      "n_b": 563,
+      "n_days": 235,
+      "mean_a": -0.038909825033647406,
+      "mean_b": -0.11726465364120783,
+      "diff": 0.07835482860756043,
+      "ci95_lo": 0.008218820604236492,
+      "ci95_hi": 0.1605474776282782,
+      "p_diff_le_0": 0.0137,
+      "n_boot": 10000
+    },
+    "win_rate": {
+      "stat": "win_rate",
+      "n_a": 2229,
+      "n_b": 563,
+      "n_days": 235,
+      "mean_a": 0.4988784208165096,
+      "mean_b": 0.4564831261101243,
+      "diff": 0.04239529470638531,
+      "ci95_lo": 0.006127598431425312,
+      "ci95_hi": 0.08543290148582598,
+      "p_diff_le_0": 0.0095,
+      "n_boot": 10000
+    }
+  },
+  "full_vs_quote_only": {
+    "stat": "expectancy_R",
+    "n_a": 2229,
+    "n_b": 2319,
+    "n_days": 232,
+    "mean_a": -0.038909825033647406,
+    "mean_b": -0.061056489866321714,
+    "diff": 0.022146664832674308,
+    "ci95_lo": 0.002943578038919277,
+    "ci95_hi": 0.04201849047048362,
+    "p_diff_le_0": 0.0122,
+    "n_boot": 10000
+  },
+  "null_permutation": {
+    "n_perm": 50,
+    "observed_ER": -0.038909825033647406,
+    "observed_WR": 0.4988784208165096,
+    "null_mean_ER": -0.02657503609400799,
+    "null_sd_ER": 0.011369444198648136,
+    "null_min_ER": -0.04959372114496771,
+    "null_max_ER": 0.0019542421353669908,
+    "null_mean_WR": 0.5060787942854851,
+    "p_null_ge_observed_ER": 0.84,
+    "p_null_ge_observed_WR": 0.84
+  },
+  "null_temporal_shift": {
+    "rows_shifted": 1097280,
+    "shift_trading_days": 7,
+    "n_trades": 1637,
+    "win_rate": 0.4972510690287111,
+    "expectancy_R": -0.039028711056811265,
+    "observed_minus_shift": 0.00011888602316385832
+  },
+  "feature_importance": {
+    "kind": "logistic",
+    "top15": [
+      [
+        "bid_px_chg_per_s_15",
+        -0.10611173100161221
+      ],
+      [
+        "atr_pct_rank",
+        0.05614686898517788
+      ],
+      [
+        "imb",
+        0.04931938385459601
+      ],
+      [
+        "imb_dev_1_15",
+        -0.04655637037513205
+      ],
+      [
+        "bid_sz",
+        -0.0344687792037463
+      ],
+      [
+        "secs_since_open",
+        -0.03232848574884708
+      ],
+      [
+        "ask_step_asym_15",
+        -0.030392310167060788
+      ],
+      [
+        "ask_sz",
+        -0.028784502057766483
+      ],
+      [
+        "repl_ratio_ask_15",
+        -0.025348273956558563
+      ],
+      [
+        "spread_ticks",
+        0.02533020530669265
+      ],
+      [
+        "bid_repl_per_sell_15",
+        -0.023115026294585738
+      ],
+      [
+        "atr1m_ticks",
+        -0.023066791704915157
+      ],
+      [
+        "bbo_sz_total",
+        0.019218810969436305
+      ],
+      [
+        "imb_mean_15",
+        -0.018817348869601704
+      ],
+      [
+        "repl_ratio_bid_15",
+        0.018328806794210124
+      ]
+    ],
+    "family_share": {
+      "BBO state": 0.2516741211733946,
+      "imbalance persistence": 0.12310643144788125,
+      "microprice pressure": 0.03782548977428203,
+      "quote update intensity": 0.1992146006632907,
+      "OFI": 0.012496018874464188,
+      "size decrease/increase": 0.0847144036079562,
+      "price-level steps": 0.04993066319151175,
+      "trade aggression": 0.013185550186655109,
+      "replenishment after aggression": 0.04333699576806413,
+      "failure to advance": 0.0023532460538308237,
+      "minimal context": 0.1821624792586692
+    },
+    "book_share_1_7": 0.7589617287327807
+  }
+}

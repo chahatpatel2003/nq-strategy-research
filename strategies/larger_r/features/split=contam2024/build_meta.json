@@ -1,0 +1,80 @@
+{
+  "split": "contam2024",
+  "start": "2024-01-01",
+  "end": "2024-12-31",
+  "spec_version": "largerr-1.0.0",
+  "r_mults": {
+    "r2p0": 2.0,
+    "r3p0": 3.0,
+    "r4p0": 4.0
+  },
+  "decision_step_s": 60,
+  "max_hold_s": 3600,
+  "trading_days": 255,
+  "rows": 30600,
+  "months": [
+    {
+      "ym": "2024-01",
+      "days": 22,
+      "rows": 2640
+    },
+    {
+      "ym": "2024-02",
+      "days": 21,
+      "rows": 2520
+    },
+    {
+      "ym": "2024-03",
+      "days": 19,
+      "rows": 2280
+    },
+    {
+      "ym": "2024-04",
+      "days": 22,
+      "rows": 2640
+    },
+    {
+      "ym": "2024-05",
+      "days": 23,
+      "rows": 2760
+    },
+    {
+      "ym": "2024-06",
+      "days": 19,
+      "rows": 2280
+    },
+    {
+      "ym": "2024-07",
+      "days": 23,
+      "rows": 2760
+    },
+    {
+      "ym": "2024-08",
+      "days": 22,
+      "rows": 2640
+    },
+    {
+      "ym": "2024-09",
+      "days": 20,
+      "rows": 2400
+    },
+    {
+      "ym": "2024-10",
+      "days": 23,
+      "rows": 2760
+    },
+    {
+      "ym": "2024-11",
+      "days": 21,
+      "rows": 2520
+    },
+    {
+      "ym": "2024-12",
+      "days": 20,
+      "rows": 2400
+    }
+  ],
+  "runtime_s": 8.0,
+  "is_contaminated": true,
+  "is_fresh_validation": false
+}

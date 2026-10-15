@@ -1,0 +1,15 @@
+{
+  "split": "val2025h2",
+  "start": "2025-07-01",
+  "end": "2025-12-31",
+  "spec_version": "dcevent-1.0.0",
+  "theta_vu": 0.5,
+  "trading_days": 128,
+  "n_events": 110253,
+  "events_per_day": 861.3515625,
+  "events_per_day_rth": 689.1875,
+  "events_per_day_primary": 243.171875,
+  "median_theta_points": 4.428571428571429,
+  "median_vu_points": 8.857142857142858,
+  "runtime_s": 6.9
+}
